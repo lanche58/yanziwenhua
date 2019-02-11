@@ -1,0 +1,835 @@
+@charset "utf-8";
+@import "color";
+@import "repeat";
+.mtop{ height: 88px; }
+.header{
+    height: 88px;  line-height: 24px;
+    .logo{ height: 100%; width: 240px; float: left; background: $mc1; 
+        > img{ display: block; margin: 20px 0 0 45px; width: 143px; }
+    }
+    .h-news{ float: right; height: 100%; width: 34%; background: $fc1; }
+    .c{ position: relative; margin: 0 34% 0 240px; height: 100%; }
+    .bodr{ display: block; position: absolute; z-index: 19; left: 0; right: 0; bottom: 0; height: 1px; background: $hc2; }
+    .nav{
+        padding-left: 6%; float: left; width: 611px; background: #fff;
+        li{ position: relative; padding: 0 (34px - 12px) /2; float: left; 
+            > a{ display: block; position: relative; padding: (88px - 24px) /2 6px; color: $fc1; 
+                &:before{ @include line-lr(1px,$mc2); z-index: 29; }
+                &.act{
+                    color: $mc2;
+                    &:before{ @include line-lr-h; }
+                }
+            }
+            &:hover{
+                > a{
+                    color: $mc2;
+                    &:before{ @include line-lr-h; }
+                }
+                .pull-nav{ transform: none; @include show; }
+            }
+        }
+    }
+    .pull-nav{
+        position: absolute; z-index: -1; left: 50%; top: 100%; padding: 10px 0; margin: -1px 0 0 -80px; width: 160px; border: 1px solid $hc2; @include bs; background: #fff; transform: translateY(-100%); @include hide; @include mt3;
+        a{ display: block; padding: (29px - 19px) / 2 5%; line-height: 1.4; text-align: center; 
+            &:hover{ color: $mc2; }
+        }
+    }
+    .menu-btn,
+    .h-lang{ float: right; }
+}
+.h-lang{
+    position: relative; border-left: 1px solid $hc2; background: #fff; cursor: pointer;
+    > p{ padding: (88px - 24px)/2 35px; 
+        &:before{ @include line-lr(1px,$mc2); z-index: 29; }
+    }
+    .icon{ display: inline-block; vertical-align: bottom; margin-left: 10px; font-size: 12px; font-weight: bold; @include mt3; }
+    .b{ position: absolute; z-index: -1; left: -1px; right: 0; top: 100%; margin-top: -1px; background: #fff; border: 1px solid $hc2; padding: 10px 0; text-align: center; transform: translateY(-100%); @include hide; transition: 300ms; }
+    a{ display: block; 
+        &:hover{ color: $mc2; }
+    }
+    &:hover{
+        .b{ transform: none; @include show; }
+        > p:before{ @include line-lr-h; }
+        .icon{ transform: rotate(-180deg); }
+    }
+}
+.menu-btn{
+    display: none; width: 129px; padding: (88px - 24px) / 2 0; border-left: 1px solid $hc2; text-align: center; font-size: 12px; text-transform: uppercase;
+    .x2{ display: none; }
+    > p{ width: 50px; text-align: left; }
+    > p, > div{ @include di; }
+    .mbtn{ position: relative; margin-bottom: 6px; width: 12px; height: 12px; 
+        i{ display: block; position: absolute; top: 50%; left: 50%; margin: -1px 0 0 -8px; width: 16px; height: 2px;
+            &:before, &:after{ @include ba; top: 0; width: 2px; height: 2px; background: #000; @include mt3; }
+        }
+        .i1{ transform: rotate(45deg); 
+            &:before{ left: 0; }
+            &:after{ right: 0; }
+        }
+        .i2{ transform: rotate(-45deg); 
+            &:before{ left: 0; }
+            &:after{ right: 0; } 
+        }
+    }
+    &.active{
+        .x1{ display: none; }
+        .x2{ display: inline-block; }
+        .mbtn{
+            i:before,
+            i:after{ width: 8px; }
+        }
+    }
+}
+.menuBox{
+    text-align: center;
+    .navMobile{ padding-top: 115px; 
+        a{ display: block; line-height: 1.4; }
+    }
+    .lang{ display: none; font-size: 16px; }
+    dd > a{ padding: 0 5%; font-size: 18px; color: $fc1; 
+        p{ @include di; position: relative; padding: 12px 2px; 
+            &:before{ @include line-lr(1px,$mc2); }
+        }
+        &.act{
+            color: $mc2;
+            p:before{ @include line-lr-h; }
+        }
+    }
+    .mtv{
+        background: $mc3; padding: 10px 0; display: none;
+        a{ padding: 6px 5%; }
+    }
+}
+.h-news{
+    .item{
+        padding: 32px 60px 0 50px;
+        > a{ display: block; color: #fff; overflow: hidden; 
+            &:hover{ color: $mc1; }
+        }
+    }
+    .date{ float: right; margin-left: 20px; }
+    .nowti{ line-height: 24px; }
+}
+.pbanner{
+    .txts{ position: absolute; top: 0; bottom: 0; left: 5%; right: 5%; color: #fff; }
+    .ch{ font-size: 30px; }
+    .txts2{ @include plr; top: 0; padding-top: (130 / 1920) * 100%; }
+    .ix-ab-ti{ float: right; color: #fff; }
+}
+@keyframes fadeIn{
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+.active .fadeIn i{ animation: fadeIn 1s both; }
+
+.pnav{ border-bottom: 1px solid $hc1; line-height: 24px; 
+    li{ padding: 0 12px; position: relative;
+        > a{ display: block; position: relative; padding: 19px 6px; 
+            &:before{ @include line-lr(1px,$mc2);  }
+            &.act{
+                color: $mc2;
+                &:before{ @include line-lr-h; }
+            }
+        }
+        &:hover{
+            .b{ transform: none; @include show; }
+        }
+    }
+    .b{ position: absolute; z-index: 299; left: 50%; top: 100%; margin-left: -80px; width: 160px; max-height: 280px; padding: 15px 0; background: $mc2; @include sy; transform: translateY(20px); @include hide; @include mt3;
+        a{ display: block; padding: 8px 5px; line-height: 1.4; color: #fff; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .pnav li>a:hover{ color: $mc2; }
+    .pnav li>a:hover:before{ @include line-lr-h; }
+    .pnav .b a:hover{ color: $mc1; }
+}
+.page-pa{ padding: 70px 0 90px 0; }
+.ab1{
+    .freeTx{ width: 780px; max-width: 100%; margin: 0 auto; overflow: visible; }
+    .ab-ti{ margin-bottom: 50px - 15px; }
+    .charac-list{ float: right; margin-right: (100px / 1490px) * 100%; }
+    .ab-video{ margin-top: 60px; }
+}
+.ab-ti{ line-height: 1.4; font-size: 36px; color: $fc1; }
+.charac-list{
+    li{ position: relative; @include c(84px); @include bs; padding-top: 16px - 7px; border: 1px solid $hc1; font-size: 12px; text-align: center; 
+        &:before{ @include circle-scale($mc1); }
+        + li{ margin-top: 15px; }
+    }
+    .ico{ display: block; height: 40px; }
+    i, p{ position: relative; }
+}
+@media screen and (min-width:1025px) {
+    .charac-list li:hover:before{ @include circle-scale-h; } 
+    .charac-list li:hover p{ color: #fff; }
+    .charac-list li:hover .ico{ background-position: center bottom; }
+}
+.ab-video{ position: relative; padding-bottom: (570 / 1490) * 100%; overflow: hidden; }
+#playing{ position: absolute; @include tblr; }
+.video-btn{
+    display: block; position: absolute; top: 50%; left: 50%; margin: -31px 0 0 -31px; width: 62px; height: 62px; color: #fff;
+    &:before, &:after{ @include ba; @include tblr; border-radius: 50%; border: 3px solid #fff; transition-timing-function: cubic-bezier(.215,.61,.355,1); }
+    &:before{ transform: scale(.8); @include hide; }
+    .sj{ display: block; margin: (62px - 20px) / 2 0 0 25px; border-top-width: 10px; border-bottom-width: 10px; border-left-width: 12px; }
+}
+@media screen and (min-width:1025px) {
+    .video-btn:hover{
+        &:before, &:after{ transition-duration: 1.2s; }
+        &:before{ transform: none; @include show; }
+        &:after{ transform: scale(1.4); @include hide; }
+    }
+}
+
+// footer
+.footer{
+    background: #fff; line-height: 24px;
+    .t{ background: $mc1; padding: (96px - 46px) / 2 0; color: #fff; 
+        a{ color: #fff; }
+    }
+    .f-share a{ color: $mc1; }
+    .logo{ float: left; width: 133px; }
+    .f-cta{ float: left; margin-left: 35px; width: 430px; }
+    .f-nav{ float: left; margin-left: 60px; }
+    .f-ma{ float: right; margin-top: -25px; }
+    .c{ padding: 50px 0 25px 0; border-bottom: 1px solid $hc2; }
+    .b{ padding: 11px 0; }
+}
+.f-share{
+    line-height: 46px;
+    a{ @include c(46px); background: $fc1; font-size: 24px; color: $mc1; 
+        + a{ margin-left: 2px; }
+    }
+    p{ margin-right: 20px; }
+}
+.f-cta{
+    p{ float: left; margin-right: 25px; }
+}
+.f-nav{
+    a{ float: left; margin-right: 35px; }
+}
+.f-ma{
+    line-height: 20px;
+    img{ width: 89px; border: 1px solid $hc2; float: left; }
+    p{ float: left; padding-top: 25px; margin-left: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .f-share a:hover{ background: #fff; color: $mc1 !important; }
+    .footer a:not(.na):hover{ color: $mc2; }
+}
+#top{ position: fixed; right: 15px; bottom: 15px; @include c(40px); background: $mc11; line-height: 40px; text-align: center; color: #fff; text-transform: uppercase; font-size: 12px; display: none; }
+// footer end
+.ix1{
+    .ix-ab-ti{ float: left; width: 66%; 
+        .pa{ padding: 109px 0 0 240px; }
+    }
+    .ix-ab{ width: 34%; height: 330px; float: right; }
+    .fixbg{ padding-bottom: 35%; }
+}
+.ix-ab-ti{
+    color: $fc1;
+    .ti1{ font-size: 30px; }
+    .ti2{ font-size: 50px; }
+}
+.ix-ab{
+    position: relative; background: $mc1; color: #fff;
+    &:before{ @include hl($mc4, 100%); }
+    a{ display: block; position: relative; padding: 130px 50px 0 50px; @include bs; color: #fff; }
+    .nowti{ margin-bottom: 10px; font-size: 24px; }
+    .tx{ width: 420px; height: 48px; max-width: 100%; }
+    .ix-more{ margin-top: 50px; }
+}
+.btn-box{
+    line-height: 0;
+}
+.btn{
+    @include di;
+}
+.btn-sjr{ display: inline-block; position: relative; width: 18px; height: 2px; background: #fff; color: #fff; @include mt3;
+    &:before{ @include ba; left: 100%; top: 50%; margin-top: -4px; width: 0; height: 0; border-bottom: 4px solid transparent; border-top: 4px solid transparent; border-left: 4px solid; }
+}
+.ix-more{
+    overflow: hidden; line-height: 20px;
+    a{ color: #fff; }
+    .btn-sjr{ float: right; margin: 9px 4px 0 0; }
+    &.ix-more2{
+        a{ color: $mc2; }
+        .btn-sjr{ float: none; margin: 0 0 9px 20px; vertical-align: bottom; background: $mc2; color: $mc2; }
+    }
+    &.white{
+        .btn-sjr{ background: #fff; color: #fff;  }
+    }
+}
+@media screen and (min-width:1025px) {
+    .ix-ab:hover:before{ @include hlw; }
+    .ix-more:hover .btn-sjr,
+    .ix-ab:hover .btn-sjr{ transform: translateX(-10px); }
+}
+.ix-news{
+    width: 33.33%; float: left;
+    > a{ display: block; position: relative; padding: 70px 40px 0 40px; background: $mc3; @include bs; }
+    &.item1{
+        a{ height: 730px; }
+    }
+    &.item-bg1{
+        a{ background: $mc1; color: #fff; }
+        
+    }
+    .ti1{ margin-bottom: 6px; opacity: .6; }
+    .ti2{ margin-bottom: 60px; max-height: 60px; font-size: 24px; line-height: 30px !important; overflow: hidden; }
+    .num{ position: absolute; left: 40px; bottom: 20px; line-height: 1; }
+    .btn-box{ position: absolute; right: 40px; bottom: 20px; }
+    &.item2{
+        a{ background: #fff; height: 365px; }
+    }
+}
+.ix-date{
+    line-height: 24px;
+    i{ @include di; width: 25px; }
+    + .ix-date{ margin-top: 8px; }
+}
+.in-more{
+    position: relative; padding: 50px 6px 0 0;
+    img{ vertical-align: bottom; }
+    .btn-sjt{ position: absolute; top: 4px; left: 4px; }
+    &.white{  
+        .btn-sjt{ background: #fff; color: #fff; }
+        &:before{ background: #fff; }
+    }
+    &:before{ @include ba; right: 0; bottom: 0; height: 0; width: 1px; background: $fc2; @include mt3; }
+}
+.btn-sjt{
+    position: relative; display: block; width: 2px; height: 16px; background: $fc2; color: $fc2;
+    &:before{ @include ba; bottom: 100%; left: 50%; margin-left: -4px; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 4px solid; }
+}
+@media screen and (min-width:1025px) {
+    .ix-news:hover .in-more:before{ height: 100%; }
+    .ix-news > a:hover{ background: $hc3; }
+    .ix-news.item-bg1 a:hover{ background: $mc4; }
+}
+.ix-news-list{
+    position: relative; padding: 70px 40px 0 40px; height: 365px; @include bs; background: $fc1; color: #fff;
+    .b{
+        margin-bottom: 80px;
+        .nowti{ line-height: 30px; }
+        a{ overflow: hidden; line-height: 30px; color: #fff; }
+    }
+    .date{ float: right; margin-left: 30px; }
+    > .nowti{ margin-bottom: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .ix-news-list a:hover{ color: $mc1; }
+}
+.ix-pro{
+    width: 66.66%; float: left; border-bottom: 1px solid $hc2;
+    .ma{ border-left: 1px solid $hc2; margin-left: 12%; padding: 100px 0; }
+    .ix-more2,
+    .ip-ti{ padding: 0 17% 0 14%; }
+    .ip-ti{ margin-bottom: 50px; }
+    .ix-pro-list{ margin-bottom: 40px; }
+    
+}
+.ip-ti{ line-height: 1.4; font-size: 50px; color: $fc1; }
+.ix-pro-list{
+    a{ display: block; position: relative; padding: 0 17% 0 14%; line-height: 24px; 
+        &:first-child .clearfix{ border-top: 1px solid $hc2; }
+    }
+    .clearfix{ border-bottom: 1px solid $hc2; padding: 28px 0; }
+    .line{ display: block; position: absolute; top: 0; left: -1px; width: 2px; height: 0; background: $mc1; @include mt3; }
+    .nowti{ line-height: 24px; font-size: 16px; color: $fc1; @include mt3; }
+    .icon{ float: right; margin-left: 30px; font-size: 14px; }
+}
+@media screen and (min-width:1025px) {
+    .ix-pro-list a:hover .line{ height: 100%; }
+    .ix-pro-list a:hover .nowti,
+    .ix-pro-list a:hover{ color: $mc2; }
+}
+.ix-pro-bg{ width: 33.33%; height: 868px; float: left; overflow: hidden;
+    .animateme{ position: relative; left: -100%; height: 100%; width: 200%; @include bg; }
+}
+.ix-ser-list{
+    li{ width: 50%; float: left; 
+        + li .b{ border-left: 1px solid $mc6; }
+    }
+    .nowti{ padding-left: 20px; margin-bottom: 25px; line-height: 20px; color: $mc2; }
+    .b{ position: relative; height: 345px; padding: 55px 40px 0 40px; @include bs; background: $mc1; color: #fff; 
+        &:before{ @include hl($mc4, 100%); }
+    }
+    .tx{ position: relative; width: 576px; height: 60px; max-width: 100%; font-size: 24px; line-height: 30px !important; }
+    .ix-more{ position: relative; margin-top: 150px; }
+    .icon{ position: absolute; bottom: 55px; right: 40px; color: $mc5; line-height: 1; font-size: 56px; }
+}
+@media screen and (min-width:1025px) {
+    .ix-ser-list .b:hover:before{ @include hlw; }
+    .ix-ser-list .b:hover .ix-more .btn-sjr{ transform: translateX(-10px); } 
+    .ix-ser-list .b:hover .icon{ animation: logoShow .5s 1; }
+}
+.ix4{
+    padding-top: 55px; position: relative;
+    &:before{ @include ba; top: 99px; left: 0; right: 0; height: 1px; background: $hc2; }
+}
+.ix5{ border-top: 1px solid $hc2; padding: 60px 0 100px 0; 
+    .ix-cul-t{ margin-bottom: 35px; }
+    .btn-box{ margin-top: 45px; }
+}
+.ix-cul-list{
+    overflow: visible;
+    &:after{ @include ba; z-index: 299; right: 50%; margin-right: 745px; top: 0; bottom: 0; width: 500px; background: #fff; }
+    .slick-list{ overflow: visible; }
+    .item{ width: 1120px; }
+    .ma{ margin-right: 5px; display: block; position: relative; color: #fff; cursor: default;
+        &:after{ @include ba; @include tblr; background: url(../images/shadow.png) repeat-x left bottom; }
+    }
+    .slick-current .ma{ cursor: pointer; }
+    .pai{ padding-bottom: (720 / 1120) * 100%; }
+    .nowti{ font-size: 18px; @include plr; padding: 0 40px; z-index: 9; bottom: 40px; @include mt3; }
+}
+@media screen and (min-width:1025px) {
+    .ix-cul-list .slick-current:hover .pai img{ transform: scale(1.1); }
+    // .ix-cul-list .slick-current:hover .nowti{ color: $mc2; }
+}
+.ab3 .freeTx{ text-align: center; }
+.ab-pw{ width: 1280px; margin: 0 auto; }
+.cul-list{
+    li{
+        &:nth-child(2n-1){
+            .pic{ float: right; }
+        }
+        + li{ margin-top: 15px; }
+    }
+    .clearfix{ background: $mc3; }
+    .pic{ width: 50%; float: left; }
+    .txts{ width: 50%; float: left; padding: 50px 45px 0 45px; @include bs; @include mt3; }
+    .en{ position: relative; padding-left: 40px; color: $mc7; text-transform: uppercase; font-size: 30px; font-weight: bold; 
+        &:before{ @include ba; left: 0; top: 50%; margin-top: -3px; width: 24px; height: 5px; background: $mc1; @include mt3; }
+    }
+    .ch{ margin-top: 95px; font-size: 26px; color: $fc1; @include mt3; }
+    .freeTx{ margin-top: 12px; font-size: 16px; }
+}
+@media screen and (min-width:1025px) {
+    .cul-list .clearfix:hover{ background: $mc1; }
+    .cul-list .clearfix:hover .ch,
+    .cul-list .clearfix:hover .txts{ color: #fff; }
+    .cul-list .clearfix:hover .en:before{ background: #fff; }
+}
+.slick-arrow{ font-family: "iconfont" !important; text-align: center; }
+.slick-prev:before{ content: "\e660"; }
+.slick-next:before{ content: "\e65f"; }
+.ix-arrow{
+    .slick-arrow{ width: 60px; height: 60px; border-radius: 100%; background: url(../images/white1.png); background: rgba(255,255,255,.4); font-size: 24px; color: #fff; line-height: 60px; }
+    .slick-prev{ left: 10px; }
+    .slick-next{ right: 10px; }
+}
+.ab-pw2{ width: 1100px; margin: 0 auto; }
+.honor-list{
+    margin-left: -42px;
+    a{ float: left; width: 25%; margin-bottom: 55px; }
+    .ma{ margin-left: 42px; }
+    .pai{ padding-bottom: (311 / 244) * 100%; 
+        &:after{ @include ba; @include tblr; @include b5; background: $mc12; @include hide; @include mt4; }
+    }
+    .icon{ display: block; z-index: 9; @include plr; top: 50%; margin-top: -20px; text-align: center; font-size: 30px; color: #fff; line-height: 40px; transform: translateY(-100%); @include hide; @include mt4; }
+    .nowti{ margin-top: 15px; padding: 0 5%; height: 20px; line-height: 20px; text-align: center; }
+    .name{ display: none; }
+}
+@media screen and (min-width:1025px) {
+    .honor-list a:hover{ color: $mc1; }
+    .honor-list a:hover .pai:after{ @include show; }
+    .honor-list a:hover .icon{ transform: none; @include show; }
+}
+.ab-more{
+    width: 120px; height: 100px; padding-top: 20px; border: 1px solid $fc3; @include bs; line-height: 24px; font-size: 12px; color: $fc1;
+    .icon{ display: block; margin-bottom: 10px; font-size: 24px; }
+    span{ color: $fc3; @include mt3; }
+    .cnum{ color: $mc1; }
+}
+@media screen and (min-width:1025px) {
+    .ab-more:hover{ background: $mc1; border-color: $mc1; color: #fff; }
+    .ab-more:hover span{ color: #fff; } 
+    .ab-more:hover .cnum{ color: $mc2; }
+}
+.news-list{
+    li{ width: 50%; float: left; border-bottom: 1px solid $hc1; }
+    a{ display: block; height: 305px; padding: 70px 40px 0 40px; @include bs; border-right: 1px solid $hc1; overflow: hidden; }
+    .item1{
+        a{ margin-left: (155 / 960) * 100%; border-left: 1px solid $hc1; }
+    }
+    .item2{
+        a{ margin-right: (155 / 960) * 100%; }
+    }
+    .nw-date{ float: left; margin-right: 30px; }
+    .txts{ overflow: hidden; }
+    .nowti{ margin-bottom: 20px; font-size: 24px; color: $fc1; }
+    .tx{ margin-bottom: 50px; height: 48px; }
+}
+.nw-date{
+    position: relative; width: 90px; height: 110px; padding: 20px 0 0 10px; @include bs; background: $mc1; color: #fff; line-height: 1; @include mt3;
+    .y{
+        position: absolute; left: 10px; bottom: 25px;
+        i{ display: none; }
+    }
+    .d{ position: relative; padding-bottom: 15px; font-size: 26px; 
+        &:before{ @include ba; left: 0; bottom: 0; width: 14px; height: 2px; background: #fff; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .news-list a:hover{ background: $mc1; color: #fff; }
+    .news-list a:hover .nw-date{ background: $mc8; }
+    .news-list a:hover .nowti{ color: #fff; text-decoration: underline; }
+}
+.nw1{
+    padding-bottom: 90px;
+    .news-list{ margin-bottom: 60px; }
+}
+.nd-t{
+    border-bottom: 1px solid #ccc; padding: 60px 0 80px 0;
+    .ti{ font-size: 30px; color: $fc1; 
+        span{ font-size: 16px; }
+    }
+    .ix-date{ margin-top: 5px; color: $mc1; }
+}
+.nd-b{
+    padding-bottom: 170px;
+    .freeTx{ width: 910px; max-width: 90%; margin: 0 auto; padding-top: 70px; }
+}
+.nd-back{
+    border-top: 1px solid #ccc;
+    a{ width: 33.33%; float: left; @include bs; border-left: 1px solid #ccc; line-height: 90px; text-align: center; 
+        &:first-child{ border: none; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .nd-back a:hover{ background: $mc1; color: #fff; }
+}
+.mien-list{
+    li{ border-bottom: 1px solid $hc1; padding: 0 (155 / 1920) * 100%; }
+    a{ width: 25%; float: left; padding: 40px 30px; @include bs; border-right: 1px solid $hc1; 
+        &:first-child{ border-left: 1px solid $hc1; }
+    }
+    .pai{ padding-bottom: (264 / 345) *100%; }
+    .date{ margin-top: 23px; line-height: 0; 
+        span{ @include di; padding: 0 5px; background: $hc2; line-height: 1.6; @include mt3; }
+    }
+    .nowti{ margin-top: 13px; font-weight: bold; font-size: 16px; color: $fc1; @include mt3; }
+    .txts{ height: 115px; font-size: 12px; overflow: hidden; }
+    .more{ margin-top: 18px; }
+}
+@media screen and (min-width:1025px) {
+    .mien-list a:hover{ background: $mc1; color: #fff; }
+    .mien-list a:hover .nowti{ color: #fff; }
+    .mien-list a:hover .date span{ background: $mc7; color: $mc1; }
+}
+.nw1 .mien-list{ margin-bottom: 60px; }
+.pro-ti{ line-height: 1.4; font-size: 50px; color: $fc1; }
+.pro1{
+    border-bottom: 1px solid $hc1; padding: 70px 0;
+    .pro-ti{ float: left; margin-right: 110px; }
+    .freeTx{
+        p{ width: 670px; max-width: 100%; }
+    }
+}
+.pro-list{
+    li{
+        + li{ margin-top: 70px; }
+        &:nth-child(2n){
+            .picbox{ float: right; margin: 0 0 0 130px; }
+            .pic{ right: auto; left: -30px; }
+            .pro-more{ right: auto; left: 0; }
+        }
+    }
+    a{ display: block; padding-top: 80px; }
+    .picbox{ width: 50.67%; margin-right: 130px; float: left; overflow: visible; }
+    .txts{ overflow: hidden; }
+    .pai{ padding-bottom: (420 / 755) * 100%; }
+    .pic{ position: absolute; top: -80px; right: -30px; width: (625 / 755) * 100%; transform: translateX(60px); opacity: 0; visibility: hidden; overflow: visible; }
+    .pro-more{ position: absolute; bottom: 0; right: 0; }
+    .num{ margin-bottom: 70px; color: $mc1; font-size: 18px; 
+        span{ @include di; border-bottom: 2px solid $mc1; width: 20px; @include mt3; }
+    }
+    .nowti{ font-size: 30px; color: $fc1; }
+    .tx{ margin-top: 25px; max-height: 48px; }
+    .active{
+        .pic{ transform: none; opacity: 1; visibility: visible; }
+    }
+}
+.pro-more{
+    width: 115px; height: 190px; padding-top: 70px; @include bs; background: $mc1; color: #fff; text-align: center;
+    .btn-sjr{ display: block; margin: 23px - 8px auto 0 auto; }
+}
+@media screen and (min-width:1025px) {
+    .pro-list li:hover .pic img{ transform: translateY(20px); }
+    .pro-list li:hover .pai img{ transform: scale(1.1); }
+    .pro-list li:hover .num span{ width: 40px; }
+}
+.pro3{ padding-bottom: 90px; border-top: 1px solid $hc1; 
+    .bodr{ border-bottom: 1px solid $hc1; }
+}
+.pro-cta{
+    display: block; background: $mc1; color: #fff; overflow: hidden;
+    .txts{ position: relative; z-index: 9; padding: 45px 40px 0 65px; height: 430px; @include bs; overflow: hidden; 
+        &:before{ @include hl($mc4, 100%); z-index: -1; }
+    }
+    .pic{ float: right; width: 415px; }
+    .ti{ font-size: 24px; }
+    .ch,
+    .en{ position: absolute; bottom: 45px; line-height: 1; }
+    .en{ left: 65px; }
+    .ch{ right: 40px; width: 14px; }
+}
+@media screen and (min-width:1025px) {
+    .pro-cta:hover .txts:before{ @include hlw; }
+}
+.pro4{ width: 1230px; margin: 0 auto; }
+.prot-list{
+    a{ display: block; position: relative; border: 1px solid $hc1; 
+        + a{ margin-top: 55px; }
+    }
+    .pic{ width: 50%; float: left; }
+    .txts{ width: 50%; float: left; @include bs; padding: 70px 45px 0 45px; }
+    .nowti{ font-size: 24px; color: $fc1; }
+    .tx{ margin-top: 25px; height: 48px; }
+    .prot-more{ position: absolute; right: 0; bottom: 0; }
+}
+.prot-more{
+    display: block; position: relative; z-index: 9; width: 174px; background: $fc1; text-align: center; line-height: 60px; color: #fff;
+    &:before{ @include hl($mc1, 100%); z-index: -1; }
+    .btn-sjr{ margin: 0 0 29px 20px; vertical-align: bottom; }
+}
+@media screen and (min-width:1025px) {
+    .prot-more-h:hover{
+        .prot-more:before{ @include hlw; }
+    }
+    .prot-list a:hover{ border-color: $mc1; }
+}
+.pro-hot{
+    background: $mc1; padding: 70px 0 50px 0; color: #fff;
+    .w{ width: 910px; max-width: 90%; margin: 0 auto; }
+    .nowti{ margin-bottom: 25px; font-size: 18px; font-weight: bold; }
+}
+.pro-hot-list{
+    margin-left: -30px; overflow: visible;
+    .item{
+        padding: 20px 0;
+        a{ display: block; padding-bottom: (330 / 420) * 100%; margin-left: 30px; }
+    }
+    .slick-arrow{ bottom: 100%; top: auto; margin: 0 0 15px 0; left: auto; right: 0; background: #fff; color: #000; font-size: 20px; line-height: 40px; }
+    .slick-prev{ margin-right: 41px; }
+}
+@media screen and (min-width:1025px) {
+    .pro-hot-list .item a:hover{ transform: translateY(-10px); }
+    .pro-hot-list .slick-arrow:hover{ background: #000; color: #fff; } 
+}
+.case-pw{ width: 1200px; margin: 0 auto; }
+.case-ti{ line-height: 1.4; color: $fc1; font-size: 36px; }
+.flow-list{
+    padding: 0 80px; margin-left: -40px;
+    li{ float: left; width: 25%; margin-bottom: 40px; }
+    .ma{ position: relative; z-index: 9; background: $mc1; padding: 0 30px; height: 110px; border-radius: 10px; color: #fff; margin-left: 40px; line-height: 1.4; 
+        &:before{ @include hl($mc4,100%); z-index: -1; border-radius: 10px; }
+    }
+    .icon{ display: block; position: absolute; width: 40px; color: $hc1; font-size: 14px; line-height: 40px; text-align: center; }
+    .icon-arrowright{ top: 50%; left: 100%; margin-top: -20px; }
+    .icon-arrowdown{ top: 100%; left: 50%; margin-left: -20px; }
+    .r{ float: right; }
+    .icon-arrowleft{ right: 100%; top: 50%; margin-top: -20px; }
+}
+@media screen and (min-width:1025px) {
+    .flow-list .ma:hover:before{ @include hlw; }
+}
+.field-list{
+    border-top: 1px solid $hc1;
+    .t{ position: relative; border-bottom: 1px solid $hc1; padding: 50px 50px 50px 0; cursor: pointer; }
+    .line{ @include hl($mc1,1px); content: none; bottom: -1px; }
+    .nowti{ font-size: 20px; line-height: 24px; color: $fc1; }
+    .case-add{ float: right; margin-left: 30px; }
+    .b{ padding: 50px 50px 90px 50px; background: $mc3; display: none; }
+    li.act{
+        .line{ @include hlw; }
+        .case-add{ background: $mc1; 
+            &:after{ transform: rotate(90deg); }
+        }
+    }
+}
+@media screen and (min-width:1025px) {
+    .field-list li:hover{
+        .line{ @include hlw; }
+        .case-add{ background: $mc1; }
+    }
+}
+.case-add{
+    position: relative; @include c(24px); background: $fc2; @include mt3;
+    &:before, &:after{ @include ba; top: 50%; left: 50%; background: #fff; @include mt3; }
+    &:before{ margin: -1px 0 0 -5px; width: 10px; height: 2px; }
+    &:after{ height: 10px; width: 2px; margin: -5px 0 0 -1px; }
+}
+.case1{
+    .flow-list{ margin-bottom: 40px; }
+    .case-ti{ margin-bottom: 50px; }
+}
+.ser-ti{ line-height: 1.4; font-size: 24px; color: $fc1; }
+.ser1{
+    padding-bottom: 70px;
+    .ser-ti{ margin-bottom: 6px; }
+}
+.ser-list{ padding: 0 (155 / 1920) * 100%; border-top: 1px solid $hc1;
+    li{ width: 25%; float: left; padding: 55px 25px 0 25px; @include bs; border-right: 1px solid $hc1; @include mt3;
+        &:first-child{ border-left: 1px solid $hc1; }
+    }
+    .ico{ display: block; margin-bottom: 17px; height: 50px; background-position: left center; }
+    .nowti{ margin-bottom: 18px; font-size: 18px; color: $fc1; }
+    .tx{ line-height: 20px !important; height: 160px; margin-bottom: 40px; }
+    .pic{
+        margin-right: -25px;
+        img{ float: right; width: 72.8%; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .ser-list li:hover{ background: $mc3; } 
+}
+.down-list{
+    border-top: 1px solid $hc1;
+    a{ display: block; padding: 47px 0; line-height: 30px; overflow: hidden; border-bottom: 1px solid $hc1; color: $fc1; }
+    .nowti{ line-height: 30px; font-size: 20px; }
+    .icon{ float: right; margin-left: 30px; font-size: 28px; }
+}
+@media screen and (min-width:1025px) {
+    .down-list a:hover{ color: $mc1; }
+}
+.cta1{ border-bottom: 1px solid $hc1; }
+.cta-tx{
+    width: 34%; float: right; padding: 70px 65px 0 65px; @include bs; 
+    .cta-list{ margin-top: 27px; }
+    .cta-tel{ margin-top: 37px; }
+    .f-ma{ margin-top: 85px; }
+    .btn-box{ margin-top: 35px; }
+}
+#map{ overflow: hidden; height: 675px; }
+.cta-list{
+    p{ overflow: hidden; line-height: 24px; 
+        + p{ margin-top: 16px; }
+    }
+    .icon{ @include di; width: 30px; color: $mc1; font-size: 20px; }
+}
+.cta-tel{
+    .icon{ float: left; margin-right: 20px; font-size: 54px; color: $mc1; line-height: 64px; }
+    .b{ overflow: hidden; font-size: 24px; line-height: 32px; }
+}
+.cta-qq{
+    width: 142px; background: $mc1; color: #fff; line-height: 48px; text-align: center;
+    .icon{ @include di; font-size: 20px; margin-right: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .cta-qq:hover{ background: $mc2; }
+    .cta-list a:not(.na):hover{ color: $mc1; }
+}
+.online-message-form{
+    .s-input{ @include bs; padding: 11px 20px; width: 100%; height: 48px; border: 1px solid $hc3; background: $hc3; line-height: 24px; @include mt3; 
+        &:focus{ border-color: $mc1; background: #fff; }
+    }
+    .s-textarea{ height: 200px; margin-top: 25px; vertical-align: bottom; }
+    .clearfix{
+        .s-input{ width: 32%; float: left;
+            + .s-input{ margin-left: 2%; }
+        }
+    }
+    .subBtn{ width: 138px; height: 48px; margin-top: 25px; background: $mc1; color: #fff; @include mt3; }
+}
+@media screen and (min-width:1025px) {
+    .online-message-form .subBtn:hover{ background: $mc2; }
+}
+.cta2{
+    .online-message-form{ margin-top: 35px; }
+}
+.sos-box{
+    text-align: center; position: fixed; left: 0; right: 0; top: 50%; margin-top: -170px; padding: 0 10%; font-size: 12px;
+    img{ vertical-align: bottom; max-width: 90%; }
+    .ch{ margin-top: 30px; font-size: 30px; color: $fc1; }
+    .en{ margin-top: 10px; font-size: 22px; }
+    .tx1{  margin-top: 60px;}
+    .ib{ color: $fc3; text-decoration: underline; 
+        + .ib{ margin-left: 30px; }
+    }
+    .fib{ margin-top: 10px; }
+}
+@media screen and (min-width:1025px) {
+    .sos-box .ib:hover{ color: $mc1; }
+}
+.cul-next{ position: absolute; z-index: 199; right: 10px; top: 50%; margin-top: -30px; @include c(60px); background: url(../images/white1.png); background: rgba(255,255,255,.4); font-size: 24px; color: #fff; font-family: iconfont!important; text-align: center; line-height: 60px; cursor: pointer; @include mt3; }
+.ix-cul{ position: relative; }
+@media screen and (min-width:1025px) {
+    .ix-arrow .slick-arrow:hover,
+    .cul-next:hover{ background: #fff; color: $mc2; }
+}
+.ix-cul-t{
+    line-height: 24px; padding-left: 20px;
+    .ti{ float: left; margin-right: 30px; line-height: 24px; color: $mc2; }
+    .cul-nums{ float: left; font-size: 12px; }
+}
+.cul-nums{
+    > span{ float: left; }
+    .line{ position: relative; width: 70px; height: 1px; margin: 12px 15px 0 15px; background: $hc1; 
+        i{ display: block; position: absolute; left: 0; top: 0; width: 0; height: 100%; background: $mc1; }
+    }
+}
+.pro-nav{
+    float: left; width: 240px; 
+    ul{ padding: 30px 0; background: $mc1; }
+    a{ display: block; line-height: 1.4; color: #fff; }
+    li{ padding: 0 15px; 
+        > a{ padding: 6px 0; }
+    }
+    .b{
+        padding: 15px 0 15px 25px; display: none;
+        a{ font-size: 12px; padding: 10px 0; color: $mc9; }
+    }
+    &.fix{ position: fixed; top: 88px; left: 0; z-index: 599; max-height: 100%; padding-bottom: 88px; @include bs; @include sy; 
+        ul{ border-top: 1px solid #fff; }
+    }
+    &::-webkit-scrollbar { width: 6px; background: $hc1; }
+    &::-webkit-scrollbar-thumb { background: $mc2; }
+}
+@media screen and (min-width:1025px) {
+    .pro-nav .b a:hover{ color: #fff; text-decoration: underline; }
+    .pro-nav li > a:hover{ color: $mc2; }
+}
+.pd-b .freeTx{ overflow: visible; }
+.ab-intro{
+    width: 750px; max-width: 90%; margin: 0 auto; text-align: center;
+    .freeTx{ margin-top: 35px; text-align: center; }
+    .btn-box{ margin-top: 85px; }
+}
+.ai-more{
+    position: relative; line-height: 1.8; color: $mc1;
+    &:before{ @include hl($mc1, 1px); }
+}
+@media screen and (min-width:1025px) {
+    .ai-more:hover:before{ @include hlw; }
+}
+.ab-link-list{
+    li{ width: 50%; float: left; }
+    .pai{ padding-bottom: (466 / 960) * 100%; 
+        &:before, &:after{  z-index: 1;  }
+        &:before{ @include tblr; @include ba; background: url(../images/blue.png); }
+        &:after{ @include hl($mc1,100%); }
+    }
+    a{ display: block; position: relative; color: #fff; }
+    .tx, .ti{ z-index: 9; @include plr; padding: 0 (93 / 960) * 100%; }
+    .tx{ padding-top: (65 / 960) * 100%; top: 0; height: 70px; font-size: 24px; line-height: 35px !important; }
+    .ti{ bottom: 0; padding-bottom: (50 / 960) * 100%; }
+    .btn-box{ position: absolute; z-index: 9; bottom: 0; right: 0; padding: 0 (93 / 960) * 100% (50 / 960) * 100% 0; transform: translateY(20px); @include hide; @include mt4;  }
+    .in-more{ padding: 35px 0 0 0; }
+}
+@media screen and (min-width:1025px) {
+    .ab-link-list a:hover .pai img{ transform: scale(1.1); }
+    .ab-link-list a:hover .pai:after{ @include hlw; }
+    .ab-link-list a:hover .btn-box{ transform: none; @include show; }
+}
+.ab7{
+    .case-ti{ margin-bottom: 15px; }
+    .ab-honor{ margin-bottom: 60px; }
+    .freeTx{ margin-bottom: 50px; }
+}
+.ab-honor{ width: 1000px; margin: 0 auto; max-width: 100%; 
+    .dnSlide-main{ height: 472px !important; }
+}
