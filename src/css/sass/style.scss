@@ -124,3 +124,33 @@
 @media screen and (min-width:1025px) {
     .footer a:hover{ color: $mc2; }
 }
+.ix1{
+    padding: 250px 0 0 (175 / 1200) * 100%;
+}
+.character-intro{
+    .picbox{ z-index: 9; height: 368px; width: 654px; max-width: 100%; background: $mc2; overflow: visible; }
+    .ix-ti{ height: 100%; padding-top: 30px; }
+    .ci{ position: absolute; bottom: 0; left: 0; z-index: -1; display: block; width: 100%; }
+    .txts{ position: relative; z-index: 20; background: $mc5; width: 574px; margin: -165px 0 0 295px; padding: 40px 50px; @include bs; color: #fff; 
+        a{ color: #fff; }
+        .freeTx{ margin-bottom: 30px; }
+    }
+}
+.ix-ti{
+    width: 120px; @include bs; background: $mc1 url(../images/index_bg1.jpg) no-repeat right bottom; background-size: 100% auto; text-align: center;
+    img{ vertical-align: bottom; }
+}
+.btn-box{
+    letter-spacing: -6px; line-height: 0;
+    .btn{ @include di; letter-spacing: 0; line-height: 1.8; }
+}
+.ci-more{
+    border-bottom: 1px solid #fff; padding: 0 45px 7px 0; font-size: 12px;
+}
+@media screen and (min-width:1025px) {
+    .ci-more:hover{ color: $mc1; padding-right: 15px; border-color: $mc1; } 
+    .character-intro .ci-more:hover{ color: $mc1; }
+}
+.ix2{
+    padding-top: 200px;
+}

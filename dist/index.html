@@ -117,7 +117,25 @@
 </div>
 
 <div class="container index-bg">
-   
+    <div class="pw">
+        <div class="ix1">
+            <div class="character-intro">
+                <div class="picbox">
+                    <div class="ix-ti"><h2><img src="img/ci_ti.png" alt=""></h2></div>
+                    <img src="img/ix_i1.png" class="ci" alt="">
+                </div>
+                <div class="txts">
+                    <div class="freeTx">颜回（公元前521年-公元前481年）尊称颜子，字子渊，春秋末期鲁国人。十四岁拜孔子为师，终生师事之，是孔子最得意的门生。孔子对颜回称赞最多，赞其好学、仁人。历代文人学士对颜回推尊有加，以颜回配享孔子、祀以太牢，历代帝王封赠有加</div>
+                    <div class="btn-box"><a href="#" class="btn ci-more">了解更多</a></div>
+                </div>
+            </div>  
+        </div>
+        
+        <div class="ix2">
+
+        </div>
+        
+    </div>
 </div>
 
 <div class="footer">
@@ -144,13 +162,10 @@
             setImgMax($('.banner .pic2'), 1920, 950, w_width, w_height);
         }
     }
-
     indexBox();
-
     $(window).resize(function() {
         indexBox();
     });
-
     $(function(){
         $('.banner').on('init', function(event, slick, currentSlide, nextSlide) {
             $('.banner .item').first().addClass('active');
@@ -167,7 +182,6 @@
             $('.banner .item').removeClass('active');
             $('.banner .item').eq(nextSlide).addClass('active');
         });
-
         $('.top-news-list').slick({
             arrows: false,
             autoplay: true,
@@ -176,8 +190,7 @@
             cssEase: 'linear',
             pauseOnHover: true,
             vertical: true
-        })
-
+        });
     })
 </script>
 </body>
