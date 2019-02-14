@@ -2,6 +2,7 @@
 @import "color";
 @import "repeat";
 .page-top{ position: relative; }
+.container{ background: $hc4; }
 .index-lines{
     span{ display: block; position: fixed; z-index: 9999; background: $mc2; }
     .l1, .l3{ width: 100%; height: 10px; }
@@ -10,18 +11,14 @@
     .l2, .l3{ right: 0; bottom: 0; }
 }
 .index-bg{
-    position: relative; background: $mc3 url(../images/index_bg.jpg) repeat;
-    &:before{ @include ba; @include tblr; background: url(../images/index_bg2.png) repeat-y center top; }
+    position: relative; z-index: 1; background: $mc3 url(../images/index_bg.jpg) repeat;
+    &:before{ @include ba; @include tblr; z-index: -1; background: url(../images/index_bg2.png) repeat-y center top; }
 }
 @media screen and (max-width:1920px) {
 	.index-bg:before{ background-size: cover; }
 }
 .banner{
     .pic2{ position: absolute; top: 0; left: 0; }
-    .slick-dots{ bottom: 35px; 
-        li{ width: 14px; height: 14px; margin: 0 15px; border: 4px solid #fff; background: none; }
-        .slick-active{ border-color: $mc1; }
-    }
     .txts{ position: absolute; left: 50%; top: 50%; margin: -200px 0 0 -200px; width: 400px; height: 400px; border: 3px solid #fff;  @include bs; color: #fff; 
         a{ color: #fff; }
     }
@@ -32,8 +29,12 @@
     .ti2{ line-height: 1.4; font-size: 16px; }
     .date{ font-style: italic; margin-top: 1px; }
 }
+.slick-dots{ bottom: 35px; 
+    li{ width: 14px; height: 14px; margin: 0 15px; border: 4px solid #fff; background: none; }
+    .slick-active{ border-color: $mc1; }
+}
 @media screen and (min-width:1025px) {
-    .banner .slick-dots li:hover{ border-color: $mc1; }
+    .slick-dots li:hover{ border-color: $mc1; }
 }
 .header{
     .logo{ position: absolute; z-index: 500; left: 40px; top: 35px; width: 80px; }
@@ -131,19 +132,19 @@
     .picbox{ z-index: 9; height: 368px; width: 654px; max-width: 100%; background: $mc2; overflow: visible; }
     .ix-ti{ height: 100%; padding-top: 30px; }
     .ci{ position: absolute; bottom: 0; left: 0; z-index: -1; display: block; width: 100%; }
-    .txts{ position: relative; z-index: 20; background: $mc5; width: 574px; margin: -165px 0 0 295px; padding: 40px 50px; @include bs; color: #fff; 
-        a{ color: #fff; }
-        .freeTx{ margin-bottom: 30px; }
-    }
+    .ci-tx{ position: relative; margin: -165px 0 0 295px; }
+}
+.ci-tx{
+    z-index: 20; background: $mc5; width: 574px; padding: 40px 50px; @include bs; color: #fff;
+    a{ color: #fff; }
+    .freeTx{ margin-bottom: 30px; }
 }
 .ix-ti{
     width: 120px; @include bs; background: $mc1 url(../images/index_bg1.jpg) no-repeat right bottom; background-size: 100% auto; text-align: center;
     img{ vertical-align: bottom; }
 }
-.btn-box{
-    letter-spacing: -6px; line-height: 0;
-    .btn{ @include di; letter-spacing: 0; line-height: 1.8; }
-}
+.btn-box{ letter-spacing: -6px; line-height: 0; }
+.btn{ @include di; letter-spacing: 0; line-height: 1.8; }
 .ci-more{
     border-bottom: 1px solid #fff; padding: 0 45px 7px 0; font-size: 12px;
 }
@@ -153,4 +154,230 @@
 }
 .ix2{
     padding-top: 200px;
+}
+.yz-seminar{
+    position: relative; padding-left: (175 / 1200) * 100%;
+    .ix-ti{ position: absolute; top: -55px; bottom: 40px; right: 65px; padding-top: 50px; }
+    .pai{
+        padding-bottom: (580 / 1025) * 100%;
+        &:before, &:after{ content: ""; }
+        &:before, &:after, .line{ position: absolute; top: 0; bottom: 0; z-index: 9; margin-left: -7px; width: 14px; background: $mc5; }
+        &:before{ left: 25%; }
+        &:after{ left: 50%; }
+        .line{ display: block; left: 75%; }
+    }
+    .ci-tx{ position: absolute; left: 0; bottom: 40px; }
+}
+.ix5, .ix4, .ix3{ padding-top: 150px; }
+.yz-fellowship{
+    .ix-ti{ float: left; height: 310px; padding-top: 40px; }
+    .fellowship-r{ margin-left: 175px; }
+}
+.fellowship-list{
+    overflow: visible; margin-left: -20px;
+
+}
+.fellowship-arrow{
+    .slick-arrow{ right: auto; top: 310px; margin: 0; width: 60px; height: 60px; 
+        i{ display: block; height: 100%; background: url(../images/aw1.png) no-repeat; }
+    }
+    .slick-prev{ left: -155px; background: $mc2; }
+    .slick-next{ left: -95px; background: #fff; 
+        i{ background-position: right top; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .fellowship-arrow .slick-arrow:hover{ background: $mc1; }
+    .fellowship-arrow .slick-prev:hover i{ background-position: left bottom; }
+    .fellowship-arrow .slick-next:hover i{ background-position: right bottom; }
+}
+.fellowship-a{
+    display: block; margin-left: 20px; padding-left: 30px;
+    .pai{ padding-bottom: (300 / 470) * 100%; }
+    .fs-tx{ position: relative; margin: -40px 40px 0 -30px; height: 210px; padding: 40px 45px 0 30px;  }
+}
+.fs-tx{
+    padding: 50px 45px 0 45px; background: $mc5; color: #fff; @include bs; overflow: hidden; @include mt4;
+    .nowti{ margin-bottom: 8px; font-size: 20px; }
+    .tx{ height: 22px * 2; margin-bottom: 25px; line-height: 22px !important; }
+    .clearfix{ font-size: 12px; }
+    .more{ float: right; }
+}
+@media screen and (min-width:1025px) {
+    .fellowship-a:hover .fs-tx{ background: $mc1; transform: translateY(-10px); } 
+}
+.ix4{
+    .ix-ti{ float: right; padding-top: 35px; height: 471px; }
+    .academic-list{ margin-right: 160px; }
+}
+.academic-list{
+    li{ width: 50%; float: left; }
+    .fs-tx{ display: block; margin: 0 1px 1px 0; height: 235px; }
+}
+@media screen and (min-width:1025px) {
+    .academic-list .fs-tx:hover{ background: $mc1; }
+}
+.ix5{
+    padding-bottom: 120px;
+    .works-display-r{ margin-left: 160px; }
+}
+.works-display-list{
+    margin-left: -30px; padding-bottom: 70px;
+    .slick-dots{ left: -130px; bottom: 0; }
+}
+.works-a{
+    display: block; position: relative; margin-left: 30px; color: #fff;
+    .pai{ padding-bottom: (615 / 330) * 100%; 
+        &:before, &:after{ @include ba; @include tblr; z-index: 1; @include mt4; }
+        &:before{ background: url(../images/shadow1.png) left bottom; background-size: auto 100%; }
+        &:after{ background: url(../images/bg1.png); @include hide; }
+    }
+    .nowti{ @include plr; bottom: 20px; z-index: 20; padding: 0 5%; font-size: 16px; text-align: center; }
+}
+.wd-see{
+    @include plr; top: 50%; z-index: 20; margin-top: -30px; text-align: center; color: #fff; transform: translateY(-20px); @include hide; @include mt4;
+    .icon{ display: block; margin-bottom: 6px; font-size: 28px; line-height: 1; }
+}
+.works-display{
+    position: relative;
+    .ix-ti{ position: absolute; top: 0; bottom: 70px; left: 0; padding-top: 50px; }
+}
+@media screen and (min-width:1025px) {
+    .works-a:hover .pai:before{ @include hide; }
+    .works-a:hover .pai:after{ @include show; }
+    .works-a:hover .wd-see{ transform: none; @include show; }
+}
+.page-bodr{ border: 10px solid $mc2; border-bottom: none; }
+.pbanner{
+    border-bottom: 10px solid $mc2;
+    .txts{ position: absolute; @include tblr; padding: 0 5%; color: #fff; 
+        img{ vertical-align: bottom; max-width: 100%; }
+    }
+    .en{ margin-top: 10px; font-size: 20px; }
+    .ti{ margin-bottom: 15px; }
+}
+.ab-ti{
+    padding-left: 30px;
+    .en{ width: 470px; max-width: 100%; margin-top: 15px; line-height: 1.4; font-size: 16px; }
+    h2{ position: relative; line-height: 0; 
+        &:before{ @include ba; left: -30px; top: 50%; margin-top: -8px; @include c(16px); border: 3px solid $mc1; @include bs; }
+    }
+    img{ vertical-align: bottom; max-width: 100%; }
+}
+.formally-established{
+    width: 680px; max-width: 100%; padding: 100px 60px; background: url(../images/bg2.png); @include bs;
+    h2{ margin-bottom: 30px; }
+    .freeTx{ margin-bottom: 35px; }
+}
+.fe-more{
+    border: 2px solid $fc2; width: 190px - 4px; height: 52px; text-align: center; line-height: 52px; font-size: 16px;
+    .icon{ @include di; margin-left: 20px; font-size: 24px; }
+}
+@media screen and (min-width:1025px) {
+    .fe-more:hover{ background: $mc1; border-color: $mc1; color: #fff; } 
+}
+.pw2{ width: 1360px; margin: 0 auto; }
+.ab2{ padding: 110px 0; }
+.an-assembly{
+    background: $mc5;
+    a{ color: #fff; }
+    .picbox{ width: 61.7%; float: left; }
+    .pai{ padding-bottom: (520 / 840) * 100%; }
+    .txts{ width: 100% - 61.7%; float: right; padding: (110 / 1360) * 100% 60px 0 60px; @include bs; }
+    .ab-ti{ padding-left: 0; 
+        h2:before{ display: none; }
+    }
+    .tx1{ margin-top: 30px; height: 24px * 2; }
+    .tx2{ margin-bottom: 40px; }
+}
+.aa-more{ @include c(64px); background: $mc6 url(../images/aw2.png) no-repeat center center; @include mt3; }
+@media screen and (min-width:1025px) {
+    .aa-more:hover{ background-color: $mc1; }
+}
+.ab1, .ab4, .ab3{ padding: 110px 0; }
+.ab5, .ab4{
+    .btn-box{ float: right; }
+    .ab-ti h2{ margin-right: 200px; }
+}
+.ab5 .learning,
+.ab4 .congress-list{ margin-top: 80px; }
+.congress-list{ padding: 0 95px; margin-left: -25px; }
+.congress-a{
+    display: block; height: 255px; margin-left: 25px; background: #fff; padding: 20px 35px 0 35px; @include bs; overflow: hidden;
+    .ti{ height: 26px * 2; margin-top: 25px; font-size: 16px; line-height: 26px !important; font-weight: bold; color: $fc1; }
+    .more{ margin-top: 40px; color: $fc3; font-size: 12px; }
+    .ti, .more{ @include mt3; }
+}
+.co-date{
+    position: relative; width: 62px; height: 62px; border: 1px solid $hc1; text-align: center; line-height: 1; font-size: 16px; @include mt3;
+    span{ display: block; }
+    .m{ padding-top: 14px; }
+    .y{ @include plr; bottom: 12px;
+        i{ display: none; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .congress-a:hover{ background: rgba(255,255,255,.9);  
+        .ti, .more{ color: $mc1; }
+        .co-date{ border-color: $mc1; background: $mc1; color: #fff; }
+    }
+}
+.congress-arrow{
+    .slick-arrow{ @include c(72px); background: $fc2; 
+        i{ display: block; height: 100%; }
+    }
+    .slick-prev{
+        left: 25px;
+        i{ background: url(../images/aw3.png) no-repeat center center; }
+    }
+    .slick-next i{ background: url(../images/aw4.png) no-repeat center center; }
+}
+@media screen and (min-width:1025px) {
+    .congress-arrow .slick-arrow:hover{ background-color: $mc1; }
+}
+.learning-spe{
+    a{ color: #fff; }
+    position: relative; width: (510 / 1360) * 100%; float: left;
+    .pai{ padding-bottom: (330 / 510) * 100%; }
+    .nowti{ @include plr; bottom: 0; padding: 0 25px; @include b5; font-size: 16px; line-height: 50px; }
+}
+.learning-r{
+    width: 57.5%; float: right;
+}
+.learning-list{
+    margin-left: -45px;
+    li{ width: 50%; float: left; margin-bottom: 50px; }
+    a{ display: block; margin-left: 45px; }
+    .pic{ width: 110px; float: left; margin-right: 15px; }
+    .txts{ overflow: hidden; }
+    .nowti{ margin-bottom: 10px; font-size: 16px; font-weight: bold; color: $fc1; @include mt3; }
+    .tx{ margin-bottom: 40px; height: 24px * 2; }
+    .more{ font-size: 12px; }
+}
+@media screen and (min-width:1025px) {
+    .learning-list a:hover .nowti{ color: $mc1; }
+}
+.ab5{ padding: 110px 0 110px - 50px 0; }
+.years-list{
+    position: relative;
+    &:before{ @include ba; left: 0; right: 0; top: 50%; border-top: 1px solid $mc2; }
+    li{ position: relative; z-index: 1; width: 100px; height: 100px; margin: 0 10px; line-height: 100px; text-align: center; font-size: 18px; color: #fff; cursor: pointer; @include mt3;
+        &:before{ @include ba; z-index: -1; top: 20px; left: 20px; @include c(60px); background: $mc5; @include mt4; }
+        &.act{
+            font-size: 32px;
+            &:before{ width: 100%; height: 100%; top: 0; left: 0; background: $mc1; }
+        }
+    }
+}
+@media screen and (min-width:1025px) {
+    .years-list li:hover:before{ background: $mc1; }
+}
+.preparation-list{
+    background: #fff; padding: 50px 60px 100px 60px; border-bottom: 10px solid $mc1;
+    .year{ margin-bottom: 33px - 13px; font-size: 20px; line-height: 1.4; font-weight: bold; color: $fc1; }
+    li{ display: none; }
+}
+.ab1{
+    .years-list{ margin-bottom: 40px; }
+    .ab-ti{ margin-bottom: 70px; }
 }
