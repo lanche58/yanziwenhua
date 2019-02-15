@@ -185,45 +185,9 @@
     <!-- container -->
 </div>
 @@include('./footer.html')
-<!-- <div class="index-lines"><span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span></div> -->
 <script src="js/page.js"></script>
 <script>
-    // function indexBox() {
-    //     if (!isMobile) {
-    //         $('.banner').css({height: w_height});
-    //         $('.banner .item').css({height: w_height});
-    //         setImgMax($('.banner .pic2'), 1920, 950, w_width, w_height);
-    //     }
-    // }
-    // indexBox();
-    // $(window).resize(function() {
-    //     indexBox();
-    // });
     $(function(){
-        // $('.banner').on('init', function(event, slick, currentSlide, nextSlide) {
-        //     $('.banner .item').first().addClass('active');
-        // });
-        // $('.banner').slick({
-        //     speed: 1000,
-        //     arrows: false,
-        //     dots: true,
-        //     autoplay: true,
-        //     autoplaySpeed: 5000,
-        //     fade: true,
-        //     pauseOnHover: false
-        // }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        //     $('.banner .item').removeClass('active');
-        //     $('.banner .item').eq(nextSlide).addClass('active');
-        // });
-        // $('.top-news-list').slick({
-        //     arrows: false,
-        //     autoplay: true,
-        //     autoplaySpeed: 0,
-        //     speed: 2000,
-        //     cssEase: 'linear',
-        //     pauseOnHover: true,
-        //     vertical: true
-        // });
         $('.congress-list').slick({
             slidesToShow: 3,
             slidesToScroll: 3
@@ -237,12 +201,6 @@
         $('.years-list li').bind(_click, function() {
             changePreparation($(this).index());
         });
-        // $('.works-display-list').slick({
-        //     slidesToShow: 3,
-        //     slidesToScroll: 3,
-        //     arrows: false,
-        //     dots: true
-        // });
     })
 </script>
 </body>
