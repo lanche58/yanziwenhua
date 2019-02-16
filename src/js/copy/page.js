@@ -118,21 +118,24 @@ $(function () {
 
 
 
-	// 手机导航
-	// $('.navMobile dd > a').bind(_click, function (e) {
-	// 	if($(this).next('.mtv').size() >= 1){
-	// 		if(!$(this).hasClass('act')){
-	// 			e.preventDefault();
-	// 			$('.navMobile dd > a').removeClass('act');
-	// 			$('.mtv').stop().slideUp(300);
-	// 			$(this).addClass('act');
-	// 			$(this).next('.mtv').stop().slideDown(300);
-	// 		}else{
-	// 			$(this).removeClass('act');
-	// 			$(this).next('.mtv').stop().slideUp(300);
-	// 		}
-	// 	}
-	// });
+    // 手机导航
+    if (isMobile) {
+        $('.navMobile dd > a').bind(_click, function (e) {
+            if($(this).next('.mtv').size() >= 1){
+                if(!$(this).hasClass('act')){
+                    e.preventDefault();
+                    $('.navMobile dd > a').removeClass('act');
+                    $('.mtv').stop().slideUp(300);
+                    $(this).addClass('act');
+                    $(this).next('.mtv').stop().slideDown(300);
+                }else{
+                    $(this).removeClass('act');
+                    $(this).next('.mtv').stop().slideUp(300);
+                }
+            }
+        });
+    }
+
 	$menuBtn.bind(_click, function () {
         if (navItem === 0) {
             $('html').addClass('open');

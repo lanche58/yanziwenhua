@@ -39,6 +39,9 @@
 .header{
     .logo{ position: absolute; z-index: 500; left: 40px; top: 35px; width: 80px; }
 }
+.logo{
+    img{ display: block; width: 100%; }
+}
 .menu-btn{
     position: fixed; top: 45px; right: 55px; z-index: 2000; @include c(50px); background: $mc1; cursor: pointer; transition: background .3s;
     span, span:before, span:after{ position: absolute; width: 20px; height: 2px; background: #fff; }
@@ -250,7 +253,7 @@
 .page-bodr{ border: 10px solid $mc2; border-bottom: none; }
 .pbanner{
     border-bottom: 10px solid $mc2;
-    .txts{ position: absolute; @include tblr; padding: 0 5%; color: #fff; 
+    .txts{ position: absolute; @include tblr; padding: 0 20%; color: #fff; 
         img{ vertical-align: bottom; max-width: 100%; }
     }
     .en{ margin-top: 10px; font-size: 20px; }
@@ -280,7 +283,7 @@
 .ab2{ padding: 110px 0; }
 .an-assembly{
     background: $mc5;
-    a{ color: #fff; }
+    a{ color: #fff; display: block; }
     .picbox{ width: 61.7%; float: left; }
     .pai{ padding-bottom: (520 / 840) * 100%; }
     .txts{ width: 100% - 61.7%; float: right; padding: (110 / 1360) * 100% 60px 0 60px; @include bs; }
@@ -304,7 +307,7 @@
 .congress-list{ padding: 0 95px; margin-left: -25px; }
 .congress-a{
     display: block; height: 255px; margin-left: 25px; background: #fff; padding: 20px 35px 0 35px; @include bs; overflow: hidden;
-    .ti{ height: 26px * 2; margin-top: 25px; font-size: 16px; line-height: 26px !important; font-weight: bold; color: $fc1; }
+    .ti{ height: 26px * 2; margin-top: 25px; font-size: 16px; line-height: 26px !important; font-weight: bold; color: $fc1; overflow: hidden; }
     .more{ margin-top: 40px; color: $fc3; font-size: 12px; }
     .ti, .more{ @include mt3; }
 }
@@ -323,7 +326,7 @@
     }
 }
 .congress-arrow{
-    .slick-arrow{ @include c(72px); background: $fc2; 
+    .slick-arrow{ @include c(72px); margin-top: -(72px / 2); background: $fc2; 
         i{ display: block; height: 100%; }
     }
     .slick-prev{
@@ -437,10 +440,10 @@
 }
 .government-list{
     margin-left: -10px;
-    width: 780px; max-width: 100%; margin: 0 auto;
     .pai{ margin-left: 10px; padding-bottom: (465 / 385) * 100%; }
     a{ width: 50%; float: left; margin-bottom: 10px; }
 }
+.government-b{  width: 780px; max-width: 90%; margin: 0 auto; }
 .leader-ti{
     padding: (74px - 24px) / 2 25px; background: $mc1; line-height: 24px; color: #fff;
     .tit{ float: left; margin-right: 20px; font-size: 20px; font-weight: bold; }

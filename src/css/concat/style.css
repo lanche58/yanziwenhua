@@ -103,6 +103,10 @@
   top: 35px;
   width: 80px; }
 
+.logo img {
+  display: block;
+  width: 100%; }
+
 .menu-btn {
   position: fixed;
   top: 45px;
@@ -599,7 +603,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 5%;
+    padding: 0 20%;
     color: #fff; }
     .pbanner .txts img {
       vertical-align: bottom;
@@ -676,7 +680,8 @@
 .an-assembly {
   background: #4b5063; }
   .an-assembly a {
-    color: #fff; }
+    color: #fff;
+    display: block; }
   .an-assembly .picbox {
     width: 61.7%;
     float: left; }
@@ -739,7 +744,8 @@
     font-size: 16px;
     line-height: 26px !important;
     font-weight: bold;
-    color: #333; }
+    color: #333;
+    overflow: hidden; }
   .congress-a .more {
     margin-top: 40px;
     color: #999;
@@ -782,6 +788,7 @@
   width: 72px;
   height: 72px;
   border-radius: 100%;
+  margin-top: -36px;
   background: #666; }
   .congress-arrow .slick-arrow i {
     display: block;
@@ -1042,10 +1049,7 @@
     transform: translateY(5px); } }
 
 .government-list {
-  margin-left: -10px;
-  width: 780px;
-  max-width: 100%;
-  margin: 0 auto; }
+  margin-left: -10px; }
   .government-list .pai {
     margin-left: 10px;
     padding-bottom: 120.77922%; }
@@ -1053,6 +1057,11 @@
     width: 50%;
     float: left;
     margin-bottom: 10px; }
+
+.government-b {
+  width: 780px;
+  max-width: 90%;
+  margin: 0 auto; }
 
 .leader-ti {
   padding: 25px 25px;

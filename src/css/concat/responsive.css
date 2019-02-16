@@ -1,0 +1,236 @@
+@media screen and (max-width:1600px) {} /* 1600 */
+@media screen and (max-width:1440px) {} /* 1440 */
+@media screen and (max-width:1366px) {
+    .banner .txts{ height: 320px; margin-top: -160px; }
+    .banner .t{ line-height: 240px; }
+    .banner .b{ padding-top: 16px; }
+    .ix1{ padding-top: 200px; }
+    .fellowship-a .fs-tx{ padding-right: 30px; }
+    .yz-seminar .ix-ti{ padding-top: 40px; right: 45px; }
+    .menuBox .menur{ padding-top: 8%; }
+    .pw2{ width: 1000px; }
+    .an-assembly .txts { padding: 6% 40px 0 40px; }
+    .congress-arrow .slick-arrow{ width: 60px; height: 60px; margin-top: -30px; }
+    .congress-list { padding: 0 80px; margin-left: -15px; }
+    .congress-a{ margin-left: 15px; }
+    .congress-arrow .slick-prev { left: 15px; }
+    .learning-r { width: 59%; }
+    .learning-list a { margin-left: 30px; }
+    .learning-list{ margin-left: -30px; }
+    .learning-list .tx{ margin-bottom: 20px; }
+    .learning-list li{ margin-bottom: 30px; }
+    .learning-spe .nowti { padding: 0 20px; font-size: 14px; }
+    .ab5{ padding-bottom: 80px; }
+} /* 1366 */
+@media screen and (max-width:1281px) {} /* 1281 */
+@media screen and (max-width:1024px) {
+    .banner .pic2{ position: relative; }
+    .index-lines{ display: none; }
+    .header{ position: fixed; z-index: 1010; left: 0; right: 0; top: 0; background: url(../images/nav_bg.jpg); height: 60px; }
+    .header .logo{ left: 5%; top: 50%; transform: translateY(-50%) scale(.6); transform-origin: left center; }
+    .menu-btn{ right: 0; top: 0; width: 60px; height: 60px; background: #e9c39f; border-radius: 0; }
+    .menu-btn span{ right: 20px; }
+    .mtop{ height: 60px; }
+    .menuBox .pic2{ display: none; }
+    .menuBox{ left: auto; width: 480px; }
+    .menuBox .menur{ width: 100%; float: none; padding: 80px 60px 0 60px; background-size: 100% auto; overflow: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .menu-btn span, .menu-btn span:after, .menu-btn span:before{ background: #b22c30; }
+    .navMobile{ overflow: hidden; height: auto; padding-bottom: 45px; }
+    .navMobile .mtv a{ float: none; margin-right: 0; }
+    .banner .b, .navMobile .mtv{ display: none; }
+    .top-news{ position: relative; width: 100%; background: #4b5063; padding: 25px 5%; }
+    .banner .txts{ left: 20%; height: auto; width: 60%; margin: 0; border: none; transform: translateY(-50%); }
+    .banner .t{ line-height: 0; }
+    .banner .slick-dots{ bottom: 5%; }
+    .ix3, .ix4, .ix2, .ix1{ padding: 120px 0 0 0; }
+    .character-intro .ci-tx{ float: right; margin-left: 0; }
+    .yz-seminar .ix-ti{ z-index: 20; top: auto; bottom: 25px; right: 25px; height: 495px; padding-top: 30px; }
+    .yz-seminar .ci-tx{ bottom: 20px; }
+    .yz-seminar{ padding-left: 10%; }
+    .fellowship-a .fs-tx{ margin-right: 30px; }
+    .yz-fellowship .fellowship-r { margin-left: 145px; }
+    .fellowship-arrow .slick-prev { left: -125px; }
+    .fellowship-arrow .slick-next { left: -65px; }
+    .yz-fellowship .ix-ti{ height: 248px; padding-top: 30px; }
+    .fellowship-arrow .slick-arrow{ top: 248px; }
+    .works-a{ margin-left: 15px; }
+    .works-display-list{ margin-left: -15px; }
+    .ix5 .works-display-r { margin-left: 135px; }
+    .works-display .ix-ti{ padding-top: 40px; }
+    .ix5{ padding-top: 120px; }
+    .works-display-list .slick-dots{ left: -120px; }
+    .ix4 .academic-list { margin-right: 135px; }
+    .pbanner, .page-bodr{ border: none; }
+    .pw2{ width: 90%; }
+    .an-assembly .picbox{ display: none; }
+    .an-assembly .txts{ width: 100%; padding-top: 50px; padding-bottom: 50px; float: none; }
+    .an-assembly .tx1{ width: 400px; max-width: 100%; }
+    .learning-list .pic{ width: 90px; }
+    .ab-established-t{ border: none; }
+} /* 1024 */
+@media screen and (max-width:861px) {
+    .ix1, .ix2, .ix3, .ix4, .ix5{ padding-top: 100px; }
+    .character-intro .ci-tx{ float: none; margin: 0; }
+    .yz-seminar{ padding-left: 120px; }
+    .yz-seminar .ci-tx{ position: static; }
+    .ci-tx{ width: 100%; }
+    .yz-seminar .pai .line, .yz-seminar .pai:after, .yz-seminar .pai:before{ display: none; }
+    .yz-seminar .ix-ti{ right: auto; left: 0; top: 0; bottom: 0; height: auto; }
+    .fellowship-list, .fellowship-a{ margin-left: 0; }
+    .fellowship-a .fs-tx{ padding-left: 40px; padding-right: 40px; margin-left: -40px; margin-right: 40px; }
+    .fellowship-a{ padding-left: 40px; }
+    .fellowship-arrow .slick-prev { left: -145px; }
+    .fellowship-arrow .slick-next { left: -85px; }
+    .fs-tx{ padding-left: 30px; padding-right: 30px; }
+    .ix5{ padding-bottom: 100px; }
+    .ix4 .ix-ti, .works-display .ix-ti { padding-top: 30px; }
+    .ab1, .ab3, .ab4 { padding: 90px 0; }
+    .ab1 .ab-ti { margin-bottom: 50px; }
+    .preparation-list { padding: 50px 40px 60px 40px; border-width: 5px; }
+    .formally-established { padding: 80px 40px; }
+    .fe-more { width: 126px; height: 42px; line-height: 42px; font-size: 12px; }
+    .fe-more .icon { margin-left: 10px; font-size: 18px; }
+    .ab4 .ab-ti h2, .ab5 .ab-ti h2 { margin-right: 180px; }
+    .ab5{ padding: 90px 0 60px 0; }
+    .ab4 .congress-list, .ab5 .learning { margin-top: 70px; }
+    .learning-r, .learning-spe{ width: 100%; float: none; }
+    .learning-list .pic{ width: 110px; }
+    .learning-r{ margin-top: 70px; }
+    .ab-back-share .pnav{ float: none; margin: 0; padding-top: 15px; clear: both; }
+    .pnav li>a{ padding: 0; }
+    .pnav li{ margin-right: 60px; float: none; display: inline-block; vertical-align: bottom; letter-spacing: 0; }
+    .pnav li>a:before{ display: none; }
+    .pnav li>a.act{ color: #b22c30; }
+    .pnav{ height: 30px; position: relative; }
+    .pnav ul { position: absolute; left: 0; bottom: 0; letter-spacing: -6px; white-space: nowrap; min-width: 100%; overflow: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .commu-item .freeTx, .commu-ti h2{ padding-left: 5%; padding-right: 5%; }
+    .commu-list li{ width: 50%; }
+
+
+
+} /* 861 */
+@media screen and (max-width:641px) {
+    .pbanner .en{ font-size: 18px; }
+    .years-list li{ width: 60px; height: 60px; line-height: 60px; }
+    .years-list li:before{ width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; }
+    .years-list li.act{ font-size: 18px; }
+    .congress-list{ padding: 0; }
+    .congress-arrow .slick-arrow{ background: rgba(102, 102, 102, .8); }
+    .congress-arrow .slick-next{ right: 5px; }
+    .congress-arrow .slick-prev{ left: 20px; }
+} /* 641 */
+@media screen and (max-width:601px) {
+    .top-news{ padding-top: 4.17vw; padding-bottom: 4.17vw; }
+    .ix1, .ix2, .ix3, .ix4, .ix5{ padding-top: 16.66vw; }
+    .ix5{ padding-bottom: 16.66vw; }
+    .character-intro .picbox{ height: 61.33vw; }
+    .ci-tx{ padding: 6.67vw 5%; }
+    .fellowship-a { padding-left: 30px; }
+    .fellowship-a .fs-tx { padding-left: 30px; padding-right: 30px; margin-left: -30px; margin-right: 30px; }
+    .yz-fellowship .fellowship-r { margin-left: 135px; }
+    .fellowship-arrow .slick-prev { left: -135px; }
+    .fellowship-arrow .slick-next { left: -75px; }
+    .academic-list li{ width: 100%; float: none; }
+    .academic-list .fs-tx{ margin-right: 0; padding-top: 35px; height: 190px; }
+    .works-display .ix-ti{ position: static; float: left; height: 471px; }
+    .works-display-list .slick-dots{ left: 15px; }
+    .yz-seminar .ci-tx{ padding-left: 30px; padding-right: 30px; }
+    .pbanner .ti{ margin-bottom: 2.5vw; }
+    .pbanner .en{ font-size: 16px; }
+    .ab1, .ab3, .ab4{ padding: 15vw 0; }
+    .ab-ti .en{ margin-top: 2.5vw; }
+    .ab1 .ab-ti{ margin-bottom: 10vw; }
+    .ab1 .years-list{ margin-bottom: 4.17vw; }
+    .preparation-list{ padding: 8.33vw 5% 10vw 5%; }
+    .preparation-list .year{ margin-bottom: 3.33vw; }
+    .formally-established { padding: 13.33vw 5%; }
+    .ab2{ padding: 18.33vw 0; }
+    .an-assembly .txts{ padding: 10vw 5%; }
+    .ab4 .fe-more, .ab5 .fe-more{ width: 88px; height: 38px; line-height: 38px; border-width: 1px; }
+    .ab4 .fe-more .icon, .ab5 .fe-more .icon{ margin-left: 5px; font-size: 16px; }
+    .ab4 .ab-ti h2, .ab5 .ab-ti h2 { margin-right: 120px; }
+    .learning-r, .ab4 .congress-list, .ab5 .learning{ margin-top: 11.67vw; }
+    .learning-list li{ width: 100%; float: none; }
+    .learning-list, .learning-list a{ margin-left: 0; }
+    .ab5{ padding: 15vw 0 10vw 0; }
+    .ab-established-cont, .ab-established-t{ padding-top: 16.67vw; }
+    .basic-intro li+li{ margin-left: 4.17vw; }
+    .ab-established-t .freeTx{ margin-top: 11.67vw; }
+    .ab-established-t .ab-back-share{ margin-top: 8.33vw; }
+    .ab-back-share{ padding: 5vw 0; }
+    .ab-established-t .ti{ margin-bottom: 4.17vw; }
+    .ab-established-cont .freeTx{ margin-bottom: 13.33vw; }
+    .ab-established-cont .btn-box{ margin-bottom: 8.33vw; }
+    .ab-established-cont .fixbg{ padding: 16.67vw 0 15vw 0; margin-bottom: 12.5vw; }
+    .government-list, .government-list .pai{ margin-left: 5px; }
+    .ab-established-cont .leader-bg { padding: 12.5vw 0 14.17vw 0; margin-top: 14.17vw; }
+    .commu-cont{ padding: 16.67vw 0 12.5vw 0; }
+    .commu-ti h2{ padding-top: 3.67vw; padding-bottom: 3.67vw; }
+    .commu-item .freeTx{ padding-top: 5.83vw; padding-bottom: 9.17vw; }
+    #commu3{ margin-bottom: 8.33vw; }
+    .commu-list .txts{ margin: 0 15px; height: 50px; }
+    .commu-list .more{ font-size: 12px; }
+    .commu-list .nowti{ font-size: 16px; }
+    .commu-list a{ padding-bottom: 20px; }
+    .commu-list li{ margin-bottom: 7.5vw; }
+    .see-more-btn{ margin: 0; transform: translateY(-50%); font-size: 14px; }
+    .see-more-btn .icon{ width: 50px; height: 50px; margin-bottom: 10px; line-height: 50px; }
+    .commu-cont .pager { margin: 8.33vw 0 7.5vw 0; }
+
+
+} /* 601 */
+@media screen and (max-width:481px) {
+    .menuBox{ width: 280px; }
+    .menuBox .menur{ padding-left: 30px; }
+    .navMobile dd{ margin-bottom: 25px; }
+    .slick-dots li{ border-width: 2px; width: 10px; height: 10px; margin: 0 8px; }
+    .ix-ti{ width: 80px; }
+    .yz-fellowship .ix-ti, .character-intro .ix-ti{ padding-top: 5vw; }
+    .yz-seminar { padding-left: 80px; }
+    .yz-seminar .ci-tx{ padding-left: 5vw; padding-right: 5vw; }
+    .fellowship-a { padding-left: 0; }
+    .fellowship-a .fs-tx{ margin: 0; height: 170px; padding: 20px 5vw 0 5vw; }
+    .yz-fellowship .fellowship-r { margin-left: 80px; }
+    .fellowship-arrow .slick-arrow{ width: 40px; height: 40px; }
+    .fellowship-arrow .slick-prev { left: -80px; }
+    .fellowship-arrow .slick-next { left: -40px; }
+    .fellowship-arrow .slick-arrow i{ position: absolute; top: 50%; left: 50%; margin: -30px 0 0 -30px; width: 60px; height: 60px; transform: scale(.8); }
+    .fs-tx .nowti{ font-size: 18px; }
+    .yz-fellowship .ix-ti{ height: 230px; }
+    .fellowship-arrow .slick-arrow { top: 230px; }
+    .ix4 .academic-list { margin-right: 81px; }
+    .academic-list .fs-tx{ height: 180px; padding: 30px 5vw 0 5vw; }
+    .ix5 .works-display-r { margin-left: 95px; }
+    .works-display-list{ padding-bottom: 11.67vw; }
+    .works-display-list, .works-a{ margin-left: 0; }
+    .works-display-list .slick-dots { left: 0; }
+    .pbanner .en{ display: none; }
+    .years-list li{ margin: 0 5px; width: 50px; height: 50px; line-height: 50px; font-size: 14px; }
+    .years-list li.act{ font-size: 14px; }
+    .aa-more{ width: 54px; height: 54px; }
+    .ab4 .fe-more, .ab5 .fe-more{ width: auto; height: auto; line-height: 1.8; border: none; color: #b22c30; }
+    .ab4 .fe-more .icon, .ab5 .fe-more .icon{ display: none; }
+    .ab4 .ab-ti h2, .ab5 .ab-ti h2 { margin-right: 70px; }
+    .congress-arrow .slick-arrow { width: 40px; height: 40px; margin-top: -20px; }
+    .congress-arrow .slick-arrow i{ transform: scale(.8); }
+    .congress-list, .congress-a{ margin-left: 0; }
+    .congress-arrow .slick-prev{ left: 5px; }
+    .congress-a{ padding-left: 25px; padding-right: 25px; }
+    .leader-ti{ padding: 4.17vw 5%; }
+    .leader-table table td, .leader-ti .text{ font-size: 14px; }
+    .leader-ti .tit{ font-size: 16px; margin-right: 10px; }
+    .leader-table table td, .leader-table table th { padding: 3.33vw 5px; }
+    .leader-table table th{ font-size: 14px; }
+    .pnav li>a{ font-size: 14px; }
+    .pnav li{ margin-right: 40px; }
+    .ab-back-share .pnav{ padding-top: 8px; }
+    .commu-list li{ width: 100%; float: none; }
+    .commu-list, .commu-list a{ margin-left: 0; }
+    .commu-list .txts{ margin: 0 5%; }
+    .see-more-btn .icon{ width: 70px; height: 70px; margin-bottom: 12px; line-height: 70px; }
+    .see-more-btn{ font-size: 16px; }
+    .pager a{ width: 50px; height: 50px; line-height: 50px; margin: 0 1px; }
+
+} /* 481 */
+@media screen and (max-width:361px) {} /* 361 */
+@media screen and (max-width:321px) {} /* 341 */

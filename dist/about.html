@@ -20,9 +20,9 @@
     <div class="page-top">
         <div class="header">
             <a href="index.html" class="logo"><img src="images/logo.png"></a>
-            <div class="menu-btn"><span></span></div>
         </div>
         
+        <div class="menu-btn"><span></span></div>
         <div class="menuBox">
             <div class="pic2" style="background-image: url(img/nav_bg1.jpg)"></div>
             <div class="menur">
@@ -176,7 +176,7 @@
         </div>
         
         <div class="ab3 pw2" id="ab3">
-            <div class="an-assembly clearfix scapic"><a href="about2.html">
+            <div class="an-assembly"><a href="about2.html" class="clearfix scapic">
                 <div class="picbox"><div class="pai"><img src="img/ab_i1.jpg" alt=""></div></div>
                 <div class="txts">
                     <div class="ab-ti"><h2><img src="img/aa_ti.png" alt=""></h2></div>
@@ -289,7 +289,22 @@
     $(function(){
         $('.congress-list').slick({
             slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToScroll: 3,
+            responsive: [{
+                breakpoint: 862,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 482,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
         });
 
         function changePreparation(i) {
