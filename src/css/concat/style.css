@@ -609,7 +609,7 @@
       vertical-align: bottom;
       max-width: 100%; }
   .pbanner .en {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 20px; }
   .pbanner .ti {
     margin-bottom: 15px; }
@@ -657,12 +657,16 @@
   height: 52px;
   text-align: center;
   line-height: 52px;
-  font-size: 16px; }
+  font-size: 16px;
+  transition: 300ms; }
   .fe-more .icon {
     display: inline-block;
     vertical-align: bottom;
     margin-left: 20px;
     font-size: 24px; }
+  .fe-more.white {
+    border-color: #fff;
+    color: #fff; }
 
 @media screen and (min-width: 1025px) {
   .fe-more:hover {
@@ -1254,4 +1258,342 @@
     margin-bottom: 0; }
 
 .gm-bg {
-  background: #fff url(../images/ab_bg2.jpg) no-repeat left top; }
+  background: #fff url(../images/ab_bg2.jpg) no-repeat left 50px; }
+
+.membership-list {
+  margin-left: -20px; }
+  .membership-list li {
+    width: 50%;
+    float: left; }
+  .membership-list a {
+    display: block;
+    position: relative;
+    padding-bottom: 40px;
+    margin-left: 20px; }
+    .membership-list a:before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      left: 40px;
+      right: 35px;
+      background: url(../images/ms_bg.jpg) no-repeat center center;
+      background-size: cover; }
+  .membership-list .pai {
+    padding-bottom: 72.32143%; }
+  .membership-list .picbox {
+    margin-right: 75px; }
+  .membership-list .txts {
+    position: relative;
+    margin: -85px 0 0 75px;
+    height: 365px;
+    padding: 40px 50px 0 50px;
+    border: 5px solid #fff;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 300ms; }
+  .membership-list .ti {
+    height: 72px;
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    line-height: 36px !important;
+    overflow: hidden; }
+  .membership-list .tx {
+    margin-bottom: 50px;
+    height: 48px; }
+  .membership-list .item1 {
+    clear: both; }
+  .membership-list .item2 {
+    padding-top: 11.5%; }
+
+.ms-more {
+  color: #b22c30;
+  font-size: 16px;
+  line-height: 56px;
+  text-transform: capitalize; }
+  .ms-more .icon {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 10px;
+    border: 2px solid #b22c30;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 52px; }
+
+@media screen and (min-width: 1025px) {
+  .membership-list a:hover .txts {
+    border-color: #b22c30;
+    transform: translateX(-20px); } }
+
+.membership-thr-list {
+  margin-left: -20px; }
+  .membership-thr-list li {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 40px; }
+  .membership-thr-list a {
+    display: block;
+    margin-left: 20px; }
+  .membership-thr-list .picbox {
+    margin-right: 30px; }
+  .membership-thr-list .pai {
+    padding-bottom: 71.79487%; }
+  .membership-thr-list .txts {
+    position: relative;
+    margin: -120px 0 0 65px;
+    padding: 35px 35px 0 35px;
+    height: 230px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 400ms; }
+  .membership-thr-list .nowti {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; }
+  .membership-thr-list .tx {
+    margin-bottom: 35px;
+    height: 48px; }
+  .membership-thr-list .ms-more {
+    line-height: 38px;
+    font-size: 12px; }
+    .membership-thr-list .ms-more .icon {
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      font-size: 18px; }
+
+@media screen and (min-width: 1025px) {
+  .membership-thr-list a:hover .txts {
+    transform: translateX(-20px); } }
+
+.load-more {
+  position: relative;
+  width: 32px;
+  height: 32px; }
+  .load-more span, .load-more span:before, .load-more span:after {
+    position: absolute;
+    bottom: 0;
+    width: 6px;
+    background: #ccc;
+    transition: background 300ms; }
+  .load-more span {
+    display: block;
+    left: 50%;
+    margin-left: -3px;
+    height: 16px;
+    animation: heightLong 1s .2s linear infinite alternate both; }
+  .load-more span:before, .load-more span:after {
+    content: "";
+    height: 32px; }
+  .load-more span:before {
+    right: 100%;
+    margin-right: 7px;
+    animation: heightLong 1s linear infinite alternate both; }
+  .load-more span:after {
+    left: 100%;
+    margin-left: 7px;
+    animation: heightLong 1s .4s linear infinite alternate both; }
+
+@media screen and (min-width: 1025px) {
+  .load-more:hover span, .load-more:hover span:before, .load-more:hover span:after {
+    background: #b22c30; } }
+
+@keyframes heightLong {
+  0% {
+    height: 0; }
+  100% {
+    height: 32px; } }
+
+.ab6 {
+  padding: 100px 0 120px 0;
+  position: relative; }
+  .ab6:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 390px;
+    background: #f7f7f7; }
+  .ab6 .membership-list {
+    margin-bottom: 80px; }
+  .ab6 .membership-thr-list {
+    margin-bottom: 40px; }
+
+.ab-academic-list {
+  margin-left: -30px; }
+  .ab-academic-list li {
+    float: left;
+    width: 33.33%;
+    margin-bottom: 40px; }
+  .ab-academic-list a {
+    display: block;
+    padding: 15px;
+    padding-bottom: 0;
+    background: #fff;
+    margin-left: 30px;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1); }
+  .ab-academic-list .pai {
+    padding-bottom: 65.71429%; }
+  .ab-academic-list .txts {
+    height: 184px;
+    padding: 25px 15px 0 15px;
+    box-sizing: border-box;
+    overflow: hidden; }
+  .ab-academic-list .nowti {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 300ms; }
+  .ab-academic-list .tx {
+    margin-bottom: 30px;
+    height: 48px; }
+  .ab-academic-list .date {
+    float: left; }
+  .ab-academic-list .see {
+    float: right; }
+
+.ab7 {
+  padding: 70px 0 100px 0; }
+  .ab7 .ab-academic-list {
+    margin-bottom: 40px; }
+
+@media screen and (min-width: 1025px) {
+  .ab-academic-list a:hover {
+    background: #b22c30;
+    color: #fff;
+    transform: translateY(-10px); }
+    .ab-academic-list a:hover .nowti {
+      color: #fff; } }
+
+.cha-bg {
+  background: #3c4151; }
+
+.charitable-list a {
+  display: block;
+  padding: 30px;
+  background: #fff;
+  overflow: hidden; }
+
+.charitable-list .pic {
+  width: 315px;
+  height: 215px;
+  margin-right: 40px;
+  float: left; }
+
+.charitable-list .txts {
+  overflow: hidden;
+  padding-right: 40px; }
+
+.charitable-list .tx {
+  margin-bottom: 40px;
+  height: 48px; }
+
+.charitable-list .cha-ti {
+  margin-bottom: 15px; }
+
+.charitable-list .fe-more {
+  width: 134px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  transition: color 0ms; }
+  .charitable-list .fe-more .icon {
+    margin-left: 10px;
+    font-size: 20px; }
+
+.charitable-list li + li {
+  margin-top: 35px; }
+
+.cha-ti {
+  line-height: 1.4;
+  font-weight: bold;
+  font-size: 22px;
+  color: #333; }
+  .cha-ti.white {
+    color: #fff; }
+
+@media screen and (min-width: 1025px) {
+  .charitable-list a:hover {
+    background: #b22c30;
+    color: #fff; }
+  .charitable-list a:hover .nowti {
+    color: #fff; }
+  .charitable-list a:hover .fe-more {
+    border-color: #fff; } }
+
+.charitable-thr-list {
+  margin-left: -25px; }
+  .charitable-thr-list li {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 50px; }
+  .charitable-thr-list a {
+    display: block;
+    background: #fff;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+    margin-left: 25px; }
+  .charitable-thr-list .txts {
+    height: 120px;
+    padding: 30px 25px 0 25px;
+    box-sizing: border-box;
+    overflow: hidden; }
+  .charitable-thr-list .nowti {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    transition: 300ms; }
+  .charitable-thr-list .date {
+    margin-top: 20px;
+    text-align: right; }
+  .charitable-thr-list .pai {
+    padding-bottom: 57.5%; }
+
+@media screen and (min-width: 1025px) {
+  .charitable-thr-list a:hover {
+    background: #b22c30;
+    color: #fff;
+    transform: translateY(-10px); }
+    .charitable-thr-list a:hover .nowti {
+      color: #fff; } }
+
+.cha1 {
+  padding: 70px 0 100px 0; }
+  .cha1 .charitable-list {
+    margin-bottom: 80px; }
+  .cha1 .charitable-thr-list {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
+.cha-nav {
+  background: #3c4151;
+  border-bottom: 10px solid #e9c39f;
+  color: #fff; }
+  .cha-nav a {
+    color: #fff; }
+  .cha-nav .ab-share {
+    float: right; }
+  .cha-nav .pnav li > a {
+    padding-top: 24px;
+    padding-bottom: 24px; }
+    .cha-nav .pnav li > a:before {
+      top: 0;
+      bottom: 0; }
+  .cha-nav .ab-share {
+    padding-top: 24px;
+    padding-bottom: 24px; }
+
+.bodrno {
+  border: none; }
+
+.cha2 .charitable-thr-list {
+  margin-top: 0 !important; }

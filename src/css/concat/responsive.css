@@ -21,6 +21,13 @@
     .learning-list li{ margin-bottom: 30px; }
     .learning-spe .nowti { padding: 0 20px; font-size: 14px; }
     .ab5{ padding-bottom: 80px; }
+    .membership-list .txts{ height: 290px; border-width: 3px; padding: 30px 40px 0 40px; }
+    .membership-list .ti{ height: 60px; margin-bottom: 25px; font-size: 20px; line-height: 30px !important; }
+    .membership-list .tx{ margin-bottom: 40px; }
+    .ms-more{ line-height: 46px; font-size: 14px; }
+    .ms-more .icon{ height: 42px; width: 42px; font-size: 20px; line-height: 42px; }
+    .membership-thr-list .txts{ margin: -80px 0 0 40px; padding: 25px 25px 0 25px; height: 184px; }
+    .membership-thr-list .tx{ margin-bottom: 20px; }
 } /* 1366 */
 @media screen and (max-width:1281px) {} /* 1281 */
 @media screen and (max-width:1024px) {
@@ -67,6 +74,21 @@
     .an-assembly .tx1{ width: 400px; max-width: 100%; }
     .learning-list .pic{ width: 90px; }
     .ab-established-t{ border: none; }
+    .general-meeting-pa { padding: 0 0 40px 0; }
+    .membership-list .picbox { margin-right: 55px; }
+    .membership-list .txts{ margin-left: 55px; }
+    .membership-list a:before{ left: 30px; top: 30px; right: 25px; }
+    .membership-list a{ padding-bottom: 30px; }
+    .membership-thr-list .txts{ margin: -60px 0 0 30px; }
+    .charitable-list .pic{ height: auto; width: 215px; margin-right: 30px; }
+    .charitable-list .txts{ padding-right: 0; }
+    .charitable-list .cha-ti{ margin-bottom: 10px; font-size: 18px; }
+    .charitable-list .fe-more{ font-size: 12px; width: 104px; height: 34px; line-height: 34px; }
+    .charitable-list .fe-more .icon{ margin-left: 8px; font-size: 18px; }
+    .charitable-list .tx{ margin-bottom: 20px; }
+    .charitable-thr-list li{ width: 50%; }
+    .cha-nav{ border: none; }
+
 } /* 1024 */
 @media screen and (max-width:861px) {
     .ix1, .ix2, .ix3, .ix4, .ix5{ padding-top: 100px; }
@@ -101,10 +123,33 @@
     .pnav li{ margin-right: 60px; float: none; display: inline-block; vertical-align: bottom; letter-spacing: 0; }
     .pnav li>a:before{ display: none; }
     .pnav li>a.act{ color: #b22c30; }
-    .pnav{ height: 30px; position: relative; }
+    .pnav{ height: 30px; position: relative; overflow: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .pnav ul { position: absolute; left: 0; bottom: 0; letter-spacing: -6px; white-space: nowrap; min-width: 100%; overflow: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .commu-item .freeTx, .commu-ti h2{ padding-left: 5%; padding-right: 5%; }
     .commu-list li{ width: 50%; }
+    .ab6:before, .membership-list a:before{ display: none; }
+    .gm-bg{ background: #f7f7f7; }
+    .membership-list .picbox{ margin-right: 0; }
+    .membership-list .txts{ margin: 0; height: 232px; border: none; padding: 15px 25px 0 25px; }
+    .membership-list .item2{ padding: 0; }
+    .membership-list .ti{ height: 48px; margin-bottom: 15px; font-size: 16px; line-height: 24px !important; }
+    .membership-list .tx{ margin-bottom: 30px; }
+    .ms-more{ line-height: 38px; font-size: 12px; }
+    .ms-more .icon{ width: 34px; height: 34px; line-height: 34px; font-size: 18px; }
+    .membership-list a{ padding-bottom: 0; }
+    .membership-list li{ margin-bottom: 40px; }
+    .ab6 .membership-list{ margin-bottom: 40px; }
+    .membership-thr-list li{ width: 50%; }
+    .ab-academic-list li{ width: 50%; }
+    .cha-nav .pnav{ height: 60px; }
+    .cha-nav .ab-share, .cha-nav .pnav li>a{ padding-top: 15px; padding-bottom: 15px; }
+    .cha-nav .ab-share{ margin-left: 10px; }
+
+
+
+
+
+
 
 
 
@@ -176,6 +221,40 @@
     .see-more-btn{ margin: 0; transform: translateY(-50%); font-size: 14px; }
     .see-more-btn .icon{ width: 50px; height: 50px; margin-bottom: 10px; line-height: 50px; }
     .commu-cont .pager { margin: 8.33vw 0 7.5vw 0; }
+    .general-meeting-pa{ padding-bottom: 6.67vw; }
+    .general-meeting-pa .ti{ margin-bottom: 0; }
+    .ab6{ padding: 15vw 0 16.67vw 0; }
+    .membership-list .ti{ margin-bottom: 10px; line-height: 1.4 !important; height: auto; white-space: nowrap; text-overflow: ellipsis; }
+    .membership-list .tx{ margin-bottom: 20px; }
+    .membership-list .txts{ height: 184px; padding-left: 20px; padding-right: 20px; }
+    .membership-thr-list li, .membership-list li{ margin-bottom: 6.67vw; }
+    .ab6 .membership-thr-list, .ab6 .membership-list{ margin-bottom: 6.67vw; }
+    .membership-thr-list .picbox{ margin-right: 0; }
+    .membership-thr-list .txts{ margin: 0; padding-top: 15px; }
+    .membership-thr-list .nowti{ font-size: 16px; }
+    .ab-academic-list a{ margin-left: 15px; }
+    .ab-academic-list{ margin-left: -15px; }
+    .ab-academic-list a{ padding: 10px; padding-bottom: 0; }
+    .ab-academic-list .txts{ height: 148px; padding: 15px 10px 0 10px; }
+    .ab-academic-list .icon-date{ font-size: 12px; }
+    .ab-academic-list .icon-date .icon{ font-size: 16px; }
+    .ab-academic-list .tx{ margin-bottom: 15px; }
+    .ab7 .ab-academic-list, .ab-academic-list li{ margin-bottom: 6.67vw; }
+    .cha1, .ab7{ padding: 11.67vw 0 16.67vw 0; }
+    .charitable-list a{ padding: 10px; }
+    .charitable-list .pic{ margin-right: 20px; }
+    .charitable-list .txts{ padding-right: 10px; }
+    .charitable-list .cha-ti{ font-size: 16px; }
+    .charitable-list li+li{ margin-top: 5.83vw; }
+    .cha1 .charitable-list{ margin-bottom: 13.33vw; }
+    .cha1 .charitable-thr-list{ margin-top: 5vw; margin-bottom: 5vw; }
+    .charitable-thr-list li{ margin-bottom: 8.33vw; }
+    .charitable-thr-list .txts{ padding-left: 20px; padding-right: 20px; }
+    .charitable-thr-list a{ margin-left: 15px; }
+    .charitable-thr-list{ margin-left: -15px; }
+
+
+
 
 
 } /* 601 */
@@ -230,6 +309,24 @@
     .see-more-btn .icon{ width: 70px; height: 70px; margin-bottom: 12px; line-height: 70px; }
     .see-more-btn{ font-size: 16px; }
     .pager a{ width: 50px; height: 50px; line-height: 50px; margin: 0 1px; }
+    .membership-thr-list li, .membership-list li{ width: 100%; float: none; }
+    .membership-thr-list, .membership-thr-list a, .membership-list, .membership-list a{ margin-left: 0; }
+    .membership-thr-list .picbox, .membership-list .picbox{ margin-right: 30px; }
+    .membership-thr-list .txts, .membership-list .txts{ margin: -60px 0 0 30px; height: 190px; padding: 25px 25px 0 25px; }
+    .membership-list a:before{ display: block; top: 15px; left: 15px; right: 15px; }
+    .membership-list a{ padding-bottom: 15px; }
+    .ab-academic-list li{ width: 100%; float: none; }
+    .ab-academic-list a, .ab-academic-list{ margin-left: 0; }
+    .ab-academic-list a{ padding: 15px; padding-bottom: 0; }
+    .ab-academic-list .txts{ height: 184px; padding: 25px 15px 0 15px; }
+    .ab-academic-list .tx{ margin-bottom: 30px; }
+    .ab-academic-list .icon-date{ font-size: 14px; }
+    .ab-academic-list .icon-date .icon{ font-size: 18px; }
+    .charitable-list a{ padding-bottom: 30px; }
+    .charitable-list .pic{ width: 100%; float: none; margin: 0 0 15px 0; }
+    .charitable-thr-list li{ width: 100%; float: none; }
+    .charitable-thr-list a, .charitable-thr-list{ margin-left: 0; }
+
 
 } /* 481 */
 @media screen and (max-width:361px) {} /* 361 */

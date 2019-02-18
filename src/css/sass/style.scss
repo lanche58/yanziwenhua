@@ -256,7 +256,7 @@
     .txts{ position: absolute; @include tblr; padding: 0 20%; color: #fff; 
         img{ vertical-align: bottom; max-width: 100%; }
     }
-    .en{ margin-top: 10px; font-size: 20px; }
+    .en{ margin-top: 20px; font-size: 20px; }
     .ti{ margin-bottom: 15px; }
 }
 .ab-ti{
@@ -273,8 +273,9 @@
     .freeTx{ margin-bottom: 35px; }
 }
 .fe-more{
-    border: 2px solid $fc2; width: 190px - 4px; height: 52px; text-align: center; line-height: 52px; font-size: 16px;
+    border: 2px solid $fc2; width: 190px - 4px; height: 52px; text-align: center; line-height: 52px; font-size: 16px; @include mt3;
     .icon{ @include di; margin-left: 20px; font-size: 24px; }
+    &.white{ border-color: #fff; color: #fff; }
 }
 @media screen and (min-width:1025px) {
     .fe-more:hover{ background: $mc1; border-color: $mc1; color: #fff; } 
@@ -522,5 +523,140 @@
     .ti{ margin-bottom: 0; }
 }
 .gm-bg{
-    background: #fff url(../images/ab_bg2.jpg) no-repeat left top;
+    background: #fff url(../images/ab_bg2.jpg) no-repeat left 50px;
+}
+.membership-list{
+    margin-left: -20px;
+    li{ width: 50%; float: left; }
+    a{ display: block; position: relative; padding-bottom: 40px; margin-left: 20px; 
+        &:before{ @include ba; top: 40px; bottom: 0; left: 40px; right: 75px - 40px; background: url(../images/ms_bg.jpg) no-repeat center center; background-size: cover; }
+    }
+    .pai{ padding-bottom: (405 / 560) * 100%; }
+    .picbox{ margin-right: 75px; }
+    .txts{ position: relative; margin: -85px 0 0 75px; height: 365px; padding: 40px 50px 0 50px; border: 5px solid #fff; background: #fff; @include bs; overflow: hidden; @include mt3; }
+    .ti{ height: 36px * 2; margin-bottom: 50px - 15px; font-size: 24px; font-weight: bold; color: $fc1; line-height: 36px !important; overflow: hidden; }
+    .tx{ margin-bottom: 50px; height: 24px * 2; }
+    .item1{ clear: both; }
+    .item2{ padding-top: 11.5%; }
+}
+.ms-more{
+    color: $mc1; font-size: 16px; line-height: 56px; text-transform: capitalize;
+    .icon{ @include di; margin-right: 10px; border: 2px solid $mc1; width: 52px; height: 52px; text-align: center; font-size: 26px; line-height: 52px; }
+}
+@media screen and (min-width:1025px) {
+    .membership-list a:hover .txts{ border-color: $mc1; transform: translateX(-20px); } 
+}
+.membership-thr-list{
+    margin-left: -20px;
+    li{ width: 33.33%; float: left; margin-bottom: 40px; }
+    a{ display: block; margin-left: 20px; }
+    .picbox{ margin-right: 30px; }
+    .pai{ padding-bottom: (280 / 390) * 100%; }
+    .txts{ position: relative; margin: -120px 0 0 65px; padding: 35px 35px 0 35px; height: 230px; @include bs; background: #fff; box-shadow: 0 3px 10px rgba(0,0,0,.1); overflow: hidden; @include mt4; }
+    .nowti{ margin-bottom: 10px; font-size: 18px; font-weight: bold; color: $fc1; }
+    .tx{ margin-bottom: 35px; height: 24px * 2; }
+    .ms-more{ line-height: 38px; font-size: 12px;
+        .icon{ width: 34px; height: 34px; line-height: 34px; font-size: 18px; }
+    }
+}
+@media screen and (min-width:1025px) {
+    .membership-thr-list a:hover .txts{ transform: translateX(-20px); }
+}
+.load-more{
+    position: relative; width: 32px; height: 32px;
+    span, span:before, span:after{ position: absolute; bottom: 0; width: 6px; background: $hc1; transition: background 300ms; }
+    span{ display: block; left: 50%; margin-left: -3px; height: 16px; animation: heightLong 1s .2s linear infinite alternate both; }
+    span:before, span:after{ content: ""; height: 32px; }
+    span:before{ right: 100%; margin-right: 7px; animation: heightLong 1s linear infinite alternate both; }
+    span:after{ left: 100%; margin-left: 7px; animation: heightLong 1s .4s linear infinite alternate both; }
+}
+@media screen and (min-width:1025px) {
+    .load-more:hover{
+        span, span:before, span:after{ background: $mc1; }
+    }
+}
+@keyframes heightLong{
+    0%{ height: 0; }
+    100%{ height: 32px; }
+}
+.ab6{
+    padding: 100px 0 120px 0; position: relative;
+    &:before{ @include ba; left: 0; right: 0; bottom: 0; height: 390px; background: $hc4; }
+    .membership-list{ margin-bottom: 80px; }
+    .membership-thr-list{ margin-bottom: 40px; }
+}
+.ab-academic-list{
+    margin-left: -30px;
+    li{ float: left; width: 33.33%; margin-bottom: 40px; }
+    a{ display: block; padding: 15px; padding-bottom: 0; background: #fff; margin-left: 30px; box-shadow: 0 7px 7px rgba(0,0,0,.1); }
+    .pai{ padding-bottom: (230 / 350) * 100%; }
+    .txts{ height: 184px; padding: 25px 15px 0 15px; @include bs; overflow: hidden; }
+    .nowti{ margin-bottom: 10px; color: $fc1; font-size: 16px; font-weight: bold; @include mt3; }
+    .tx{ margin-bottom: 30px; height: 24px * 2; }
+    .date{ float: left; }
+    .see{ float: right; }
+}
+.ab7{ padding: 70px 0 100px 0; 
+    .ab-academic-list{ margin-bottom: 40px; }
+}
+@media screen and (min-width:1025px) {
+    .ab-academic-list a:hover{
+        background: $mc1; color: #fff; transform: translateY(-10px);
+        .nowti{ color: #fff; }
+    }
+}
+.cha-bg{ background: $mc3; }
+.charitable-list{
+    a{ display: block; padding: 30px; background: #fff; overflow: hidden; }
+    .pic{ width: 315px; height: 215px; margin-right: 40px; float: left; }
+    .txts{ overflow: hidden; padding-right: 40px; }
+    .tx{ margin-bottom: 40px; height: 24px * 2; }
+    .cha-ti{ margin-bottom: 15px; }
+    .fe-more{ width: 134px; height: 44px; line-height: 44px; font-size: 14px; transition: color 0ms;
+        .icon{ margin-left: 10px; font-size: 20px; }
+    }
+    li + li{ margin-top: 35px; }
+}
+.cha-ti{ line-height: 1.4; font-weight: bold; font-size: 22px; color: $fc1; 
+    &.white{ color: #fff; }
+}
+@media screen and (min-width:1025px) {
+    .charitable-list a:hover{ background: $mc1; color: #fff; }
+    .charitable-list a:hover .nowti{ color: #fff; }
+    .charitable-list a:hover .fe-more{ border-color: #fff; }
+}
+.charitable-thr-list{
+    margin-left: -25px;
+    li{ width: 33.33%; float: left; margin-bottom: 50px; }
+    a{ display: block; background: #fff; box-shadow: 0 7px 7px rgba(0,0,0,.1); margin-left: 25px; }
+    .txts{ height: 120px; padding: 30px 25px 0 25px; @include bs; overflow: hidden; }
+    .nowti{ font-size: 16px; color: $fc1; font-weight: bold; @include mt3; }
+    .date{ margin-top: 20px; text-align: right; }
+    .pai{ padding-bottom: (184px / 320px) * 100%; }
+}
+@media screen and (min-width:1025px) {
+    .charitable-thr-list a:hover{
+        background: $mc1; color: #fff; transform: translateY(-10px);
+        .nowti{ color: #fff; }
+    }
+}
+.cha1{
+    padding: 70px 0 100px 0;
+    .charitable-list{ margin-bottom: 80px; }
+    .charitable-thr-list{ margin-top: 30px; margin-bottom: 30px; }
+}
+.cha-nav{
+    background: $mc3; border-bottom: 10px solid $mc2; color: #fff;
+    a{ color: #fff; }
+    .ab-share{ float: right; }
+    .pnav{ 
+        li>a{ padding-top: 24px; padding-bottom: 24px; 
+            &:before{ top: 0; bottom: 0; }
+        }
+    }
+    .ab-share{ padding-top: 24px; padding-bottom: 24px; }
+}
+.bodrno{ border: none; }
+.cha2{
+    .charitable-thr-list{ margin-top: 0 !important; }
 }

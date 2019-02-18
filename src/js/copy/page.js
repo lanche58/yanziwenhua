@@ -39,11 +39,11 @@ function pageBox() {
         isMobile = false;
     };
 
-    if (isMobile) {
-        $('.pnav li').each(function() {
+    if (w_width <= 862) {
+        $('.pnav li').each(function(i) {
             var _act = $(this).find('a').hasClass('act');
             if (_act) {
-                $('.pnav ul').scrollLeft($(this).position().left);
+                $('.pnav').scrollLeft($(this).position().left);
             }
         });
     }
