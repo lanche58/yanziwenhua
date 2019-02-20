@@ -104,7 +104,7 @@
         <div class="ab4 fixbg" style="background-image: url(img/abfixbg1.jpg);" id="ab4">
             <div class="pw2">
                 <div class="ab-ti clearfix">
-                    <div class="btn-box"><a href="about1.html" class="btn fe-more">查看更多<i class="icon iconfont icon-single_arrow"></i></a></div>
+                    <div class="btn-box"><a href="about3.html" class="btn fe-more">查看更多<i class="icon iconfont icon-single_arrow"></i></a></div>
                     <h2><img src="img/co_ti.png" alt=""></h2>
                 </div>
                 <div class="congress-list congress-arrow u-slick">
@@ -134,7 +134,7 @@
         <!-- ab4 -->
         <div class="ab5 pw2" id="ab5">
             <div class="ab-ti clearfix">
-                <div class="btn-box"><a href="about1.html" class="btn fe-more">查看更多<i class="icon iconfont icon-single_arrow"></i></a></div>
+                <div class="btn-box"><a href="about4.html" class="btn fe-more">查看更多<i class="icon iconfont icon-single_arrow"></i></a></div>
                 <h2><img src="img/le_ti.png" alt=""></h2>
             </div>
             <div class="learning clearfix">
@@ -215,6 +215,18 @@
         changePreparation(0);
         $('.years-list li').bind(_click, function() {
             changePreparation($(this).index());
+        });
+
+        $('.mtv .abAnchor').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            if(hash){
+                e.preventDefault();
+                $('html').removeClass('open');
+                $menuBtn.removeClass('active');
+                $menuBox.stop().fadeOut();
+                navItem = 0;
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
         });
     })
 </script>

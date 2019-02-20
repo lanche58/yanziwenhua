@@ -58,12 +58,27 @@
                 </a></li>
             </ul>
             <!-- charitable-thr-list -->
-            <div class="btn-box tac"><a href="#" class="btn fe-more white">查看更多<i class="icon iconfont icon-single_arrow"></i></a></div>
+            <div class="btn-box tac"><a href="charitable1.html" class="btn fe-more white">查看更多<i class="icon iconfont icon-single_arrow"></i></a></div>
         </div>
     </div>
     <!-- container -->
 </div>
 @@include('./footer.html')
 <script src="js/page.js"></script>
+<script>
+    $(function(){
+        $('.mtv .chaAnchor').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            if(hash){
+                e.preventDefault();
+                $('html').removeClass('open');
+                $menuBtn.removeClass('active');
+                $menuBox.stop().fadeOut();
+                navItem = 0;
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
+        });
+    })
+</script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+@@include('./top.html')
+</head>
+<body>
+<div class="page-bodr">
+    <div class="page-top">
+        @@include('./header.html')
+        @@include('./pbanner.html',{
+            "img": "ep_banner.jpg",
+            "ti": "ab_ti1.png",
+            "ch": "ep_ti2.png",
+            "en": "Yanzi Cultural Charity Foundation"
+        })
+    </div>
+    <!-- page-top -->
+    <div class="container">
+       <div class="ep1">
+           <ul class="enterprise-list">
+               <li id="ep1"><a href="news-detail.html" class="scapic clearfix">
+                   <div class="picbox"><div class="pai"><img src="img/ep_i1.jpg" alt=""></div></div>
+                   <div class="txts">
+                       <h3 class="nowti ch">海外企业</h3>
+                       <h4 class="nowti en">Overseas enterprises</h4>
+                       <h2 class="nowti ti">东方圣母颜征在的故事</h2>
+                       <p class="tx">在中国， 在东方，在全球，都知道春秋时期的鲁国即现在的山东曲阜， 出了一位了不起的圣人——孔子。孔子是儒家学说的创始人，他的思想、学问影响了中国上至帝王下至百姓几千年，传播到周边国家乃至全世界，到今天依然有那么多虔诚的人们，络绎不绝地从四面八方赶到曲阜祭拜孔子...</p>
+                       <div class="btn-box"><span class="btn fe-more">查看更多<i class="icon iconfont icon-single_arrow"></i></span></div>
+                   </div>
+               </a></li>
+               <li id="ep2"><a href="news-detail.html" class="scapic clearfix">
+                   <div class="picbox"><div class="pai"><img src="img/ep_i2.jpg" alt=""></div></div>
+                   <div class="txts">
+                       <h3 class="nowti ch">海外企业</h3>
+                       <h4 class="nowti en">Overseas enterprises</h4>
+                       <h2 class="nowti ti">东方圣母颜征在的故事</h2>
+                       <p class="tx">在中国， 在东方，在全球，都知道春秋时期的鲁国即现在的山东曲阜， 出了一位了不起的圣人——孔子。孔子是儒家学说的创始人，他的思想、学问影响了中国上至帝王下至百姓几千年，传播到周边国家乃至全世界，到今天依然有那么多虔诚的人们，络绎不绝地从四面八方赶到曲阜祭拜孔子...</p>
+                       <div class="btn-box"><span class="btn fe-more">查看更多<i class="icon iconfont icon-single_arrow"></i></span></div>
+                   </div>
+               </a></li>
+           </ul>
+       </div>
+       <!-- ep1 -->
+    </div>
+    <!-- container -->
+</div>
+@@include('./footer.html')
+<script src="js/page.js"></script>
+<script>
+    $(function(){
+        $('.mtv .epAnchor').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            if(hash){
+                e.preventDefault();
+                $('html').removeClass('open');
+                $menuBtn.removeClass('active');
+                $menuBox.stop().fadeOut();
+                navItem = 0;
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
+        });
+    })
+</script>
+</body>
+</html>
