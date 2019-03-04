@@ -139,35 +139,35 @@
                 <div class="ix-ti trans transY dly-2"><h2><img src="img/ac_ti.png" alt=""></h2></div>
                 <div class="works-display-r trans transY dly-4">
                     <div class="works-display-list u-slick">
-                        <div class="item"><a href="news-detail.html" class="works-a">
+                        <div class="item"><a href="javascript:;" data-big-num="1" data-big-img="img/ix_i5.jpg" data-title="颜真卿作品" class="works-a">
                             <div class="pai">
                                 <img src="img/ix_i5.jpg" alt="">
                                 <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
                             </div>
                             <h3 class="nowti">颜真卿作品</h3>
                         </a></div>
-                        <div class="item"><a href="news-detail.html" class="works-a">
+                        <div class="item"><a href="javascript:;" data-big-num="2" data-big-img="img/ix_i6.jpg" data-title="颜真卿作品" class="works-a">
                             <div class="pai">
                                 <img src="img/ix_i6.jpg" alt="">
                                 <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
                             </div>
                             <h3 class="nowti">颜真卿作品</h3>
                         </a></div>
-                        <div class="item"><a href="news-detail.html" class="works-a">
+                        <div class="item"><a href="javascript:;" data-big-num="3" data-big-img="img/ix_i5.jpg" data-title="颜真卿作品" class="works-a">
                             <div class="pai">
                                 <img src="img/ix_i5.jpg" alt="">
                                 <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
                             </div>
                             <h3 class="nowti">颜真卿作品</h3>
                         </a></div>
-                        <div class="item"><a href="news-detail.html" class="works-a">
+                        <div class="item"><a href="javascript:;" data-big-num="4" data-big-img="img/ix_i6.jpg" data-title="颜真卿作品" class="works-a">
                             <div class="pai">
                                 <img src="img/ix_i6.jpg" alt="">
                                 <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
                             </div>
                             <h3 class="nowti">颜真卿作品</h3>
                         </a></div>
-                        <div class="item"><a href="news-detail.html" class="works-a">
+                        <div class="item"><a href="javascript:;" data-big-num="5" data-big-img="img/ix_i5.jpg" data-title="颜真卿作品" class="works-a">
                             <div class="pai">
                                 <img src="img/ix_i5.jpg" alt="">
                                 <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -240,6 +240,7 @@
             }
             ]
         });
+        var worksLen = $('.works-display-list .item').length;
         $('.works-display-list').slick({
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -266,6 +267,11 @@
                 'transition-delay': 400 + 200*i + 'ms',
                 '-webkit-transition-delay': 400 + 200*i + 'ms'
             });
+        });
+        $('.works-a').bind(_click, function() {
+            var num = $(this).attr('data-big-num'),
+                $parent = $(this).parents('.works-display-list');
+            openshowImg(num, worksLen, $parent);
         });
     })
 </script>

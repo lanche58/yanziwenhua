@@ -845,3 +845,25 @@
     padding: 70px 0 100px 0;
     .elite-list{ margin-top: 50px; }
 }
+.imgShowBox{
+    position: fixed; z-index: 9999; @include tblr; @include b5; background: rgba(0,0,0,.8); @include hide; @include mt6;
+    .imgShowDemo .text, .top-bar, .arrow{ z-index: 99; @include b5; background: rgba(0,0,0,.3); text-align: center; color: #fff; }
+    .arrow, .close{ cursor: pointer; transition: background 300ms;
+        @media screen and (min-width:1025px) {
+            &:hover{ background: $mc1; }
+        }
+    }
+    .imgShowDemo .text, .top-bar{ @include plr; }
+    .top-bar{ top: 0; height: 44px; line-height: 44px; overflow: hidden; }
+    .close{ float: right; width: 44px; font-size: 18px; font-weight: bold; }
+    .counter{ float: left; margin-left: 10px; }
+    .arrow{ position: absolute; top: 50%; margin-top: -15px; width: 32px; height: 30px; line-height: 30px; font-size: 14px; }
+    .prev{ left: 6px; }
+    .next{ right: 6px; }
+    .imgShowDemo{
+        height: 100%;
+        .img{ position: absolute; @include tblr; width: auto; height: auto; max-width: 100%; max-height: 100%; vertical-align: middle; margin: auto; }
+        .text{ bottom: 0; padding: 10px 5%; }
+    }
+    &.show{ @include show; }
+}

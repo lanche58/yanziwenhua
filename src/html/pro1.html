@@ -28,7 +28,7 @@
     <div class="container wk-bg">
         <div class="pro1 pw3">
             <ul class="works-list clearfix">
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="1" data-big-img="img/pro_i7.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i7.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="2" data-big-img="img/pro_i8.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i8.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="3" data-big-img="img/pro_i9.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i9.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="4" data-big-img="img/pro_i10.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i10.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="5" data-big-img="img/pro_i11.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i11.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="6" data-big-img="img/pro_i12.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i12.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                 </a></li>
-                <li><a href="news-detail.html">
+                <li><a href="javascript:;" data-big-num="7" data-big-img="img/pro_i13.jpg" data-title="颜真卿《祭侄文稿》">
                     <div class="pic">
                         <img src="img/pro_i13.jpg" alt="">
                         <div class="wd-see"><i class="icon iconfont icon-chakan1"></i>查看</div>
@@ -167,6 +167,12 @@
         $('.collection').bind(_click, function(e) {
             e.preventDefault();
             $(this).toggleClass('act');
+        });
+        var worksLen = $('.works-list li').length;
+        $('.works-list a').bind(_click, function() {
+            var num = $(this).attr('data-big-num'),
+                $parent = $(this).parents('.works-list');
+            openshowImg(num, worksLen, $parent);
         });
     })
 </script>
